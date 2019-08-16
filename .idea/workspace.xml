@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b6c6933-5c65-446b-9b50-2432aadd94bb" name="Default Changelist" comment="忘记改了啥了">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ParamCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ParamCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidationResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidationResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/META-INF/boss-bes-basedata-center-dao.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-pojo/target/classes/META-INF/boss-bes-basedata-center-pojo.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-service/target/classes/META-INF/boss-bes-basedata-center-service.kotlin_module" beforeDir="false" />
-    </list>
+    <list default="true" id="3b6c6933-5c65-446b-9b50-2432aadd94bb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/boss-bes-basedata-center-parent/target/" />
     <ignored path="$PROJECT_DIR$/boss-bes-basedata-pojo/target/" />
@@ -499,7 +490,7 @@
       <workItem from="1565916999084" duration="1361000" />
       <workItem from="1565922865999" duration="1003000" />
       <workItem from="1565925031213" duration="3023000" />
-      <workItem from="1565935196636" duration="1783000" />
+      <workItem from="1565935196636" duration="2026000" />
     </task>
     <task id="LOCAL-00001" summary="改了端口和添加日志注解">
       <created>1565926693513</created>
@@ -508,11 +499,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565926693513</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="忘记改了啥了">
+      <created>1565937004373</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565937004373</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191007000" />
+    <option name="totallyTimeSpent" value="191250000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -525,9 +523,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49822694" visible="true" weight="0.37752628" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49822694" visible="true" weight="0.37752628" />
       <window_info id="Structure" order="1" sideWeight="0.50177306" side_tool="true" weight="0.30881163" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -547,13 +544,13 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" order="11" visible="true" weight="0.329927" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5012126" side_tool="true" weight="0.41666666" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5004042" side_tool="true" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="14" sideWeight="0.4995958" visible="true" weight="0.3285968" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="15" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32978722" />
       <window_info anchor="bottom" id="Java Enterprise" order="17" weight="0.32978722" />
-      <window_info anchor="bottom" id="Run Dashboard" order="18" sideWeight="0.4987874" visible="true" weight="0.3445826" />
+      <window_info anchor="bottom" id="Run Dashboard" order="18" sideWeight="0.4987874" weight="0.3445826" />
       <window_info anchor="right" id="Coverage" order="0" sideWeight="0.5032258" side_tool="true" visible="true" weight="0.114379086" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -572,7 +569,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="改了端口和添加日志注解" />
-    <option name="LAST_COMMIT_MESSAGE" value="改了端口和添加日志注解" />
+    <MESSAGE value="忘记改了啥了" />
+    <option name="LAST_COMMIT_MESSAGE" value="忘记改了啥了" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
