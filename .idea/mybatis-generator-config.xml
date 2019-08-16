@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisGeneratorConfiguration">
+    <option name="credentials">
+      <map>
+        <entry key="jdbc:mysql://localhost:3306/db_basedata_center">
+          <value>
+            <Credential>
+              <option name="username" value="root" />
+            </Credential>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="tableConfigs">
+      <map>
+        <entry key="t_category">
+          <value>
+            <TableConfig>
+              <option name="basePackage" value="string_operation.validation_string" />
+              <option name="comment" value="true" />
+              <option name="domainName" value="Category" />
+              <option name="domainPackage" value="string_operation.validation_string.domain" />
+              <option name="exampleName" value="CategoryExample" />
+              <option name="examplePackage" value="string_operation.validation_string.example" />
+              <option name="examplePostfix" value="Example" />
+              <option name="mapperName" value="CategoryMapper" />
+              <option name="mapperPackage" value="string_operation.validation_string.mapper" />
+              <option name="mapperPostfix" value="Mapper" />
+              <option name="moduleRootPath" value="$PROJECT_DIR$" />
+              <option name="name" value="t_category" />
+              <option name="primaryKey" value="category_id" />
+              <option name="resourcePath" value="src/main/resources" />
+              <option name="sourcePath" value="src/main/java" />
+              <option name="tableName" value="t_category" />
+              <option name="xmlPackage" value="mapper" />
+            </TableConfig>
+          </value>
+        </entry>
+        <entry key="t_comb_exam_config">
+          <value>
+            <TableConfig>
+              <option name="basePackage" value="com.bosssoft.bes.basedata.center.dao" />
+              <option name="comment" value="true" />
+              <option name="domainName" value="CombExamConfig" />
+              <option name="domainPackage" value="com.bosssoft.bes.basedata.center.dao.domain" />
+              <option name="exampleName" value="CombExamConfigExample" />
+              <option name="examplePackage" value="com.bosssoft.bes.basedata.center.dao.example" />
+              <option name="examplePostfix" value="Example" />
+              <option name="mapperName" value="CombExamConfigMapper" />
+              <option name="mapperPackage" value="com.bosssoft.bes.basedata.center.dao.mapper" />
+              <option name="mapperPostfix" value="Mapper" />
+              <option name="moduleRootPath" value="$PROJECT_DIR$" />
+              <option name="name" value="t_comb_exam_config" />
+              <option name="primaryKey" value="comb_exam_id" />
+              <option name="resourcePath" value="src/main/resources" />
+              <option name="sourcePath" value="src/main/java" />
+              <option name="tableName" value="t_comb_exam_config" />
+              <option name="useExample" value="true" />
+              <option name="xmlPackage" value="mapper" />
+            </TableConfig>
+          </value>
+        </entry>
+        <entry key="t_comb_exam_config_item">
+          <value>
+            <TableConfig>
+              <option name="basePackage" value="com.bosssoft.bes.basedata.center.dao" />
+              <option name="comment" value="true" />
+              <option name="domainName" value="CombExamConfigItem" />
+              <option name="domainPackage" value="com.bosssoft.bes.basedata.center.dao.domain" />
+              <option name="exampleName" value="CombExamConfigItemExample" />
+              <option name="examplePackage" value="com.bosssoft.bes.basedata.center.dao.example" />
+              <option name="examplePostfix" value="Example" />
+              <option name="mapperName" value="CombExamConfigItemMapper" />
+              <option name="mapperPackage" value="com.bosssoft.bes.basedata.center.dao.mapper" />
+              <option name="mapperPostfix" value="Mapper" />
+              <option name="moduleRootPath" value="$PROJECT_DIR$" />
+              <option name="name" value="t_comb_exam_config_item" />
+              <option name="primaryKey" value="comb_exam_config_item_id" />
+              <option name="resourcePath" value="src/main/resources" />
+              <option name="sourcePath" value="src/main/java" />
+              <option name="tableName" value="t_comb_exam_config_item" />
+              <option name="useExample" value="true" />
+              <option name="xmlPackage" value="mapper" />
+            </TableConfig>
+          </value>
+        </entry>
+        <entry key="t_dictionary">
+          <value>
+            <TableConfig>
+              <option name="basePackage" value="com.bosssoft.bes.basedata.center.entity" />
+              <option name="comment" value="true" />
+              <option name="domainName" value="Dictionary" />
+              <option name="domainPackage" value="com.bosssoft.bes.basedata.center.entity" />
+              <option name="exampleName" value="DictionaryExample" />
+              <option name="examplePackage" value="com.bosssoft.bes.basedata.center.entity" />
+              <option name="examplePostfix" value="Example" />
+              <option name="mapperName" value="DictionaryMapper" />
+              <option name="mapperPackage" value="com.bosssoft.bes.basedata.center.entity" />
+              <option name="mapperPostfix" value="Mapper" />
+              <option name="moduleRootPath" value="$PROJECT_DIR$/boss-bes-basedata-center-dao" />
+              <option name="name" value="t_dictionary" />
+              <option name="primaryKey" value="dictionary_id" />
+              <option name="resourcePath" value="src/main/resources" />
+              <option name="sourcePath" value="src/main/java" />
+              <option name="tableName" value="t_dictionary" />
+              <option name="useExample" value="true" />
+              <option name="xmlPackage" value="mapper" />
+            </TableConfig>
+          </value>
+        </entry>
+        <entry key="t_subject">
+          <value>
+            <TableConfig>
+              <option name="basePackage" value="com.bosssoft.bes.basedata.center.entity" />
+              <option name="comment" value="true" />
+              <option name="domainName" value="Subject" />
+              <option name="domainPackage" value="com.bosssoft.bes.basedata.center.entity" />
+              <option name="exampleName" value="SubjectExample" />
+              <option name="examplePackage" value="com.bosssoft.bes.basedata.center.entity" />
+              <option name="examplePostfix" value="Example" />
+              <option name="mapperName" value="SubjectMapper" />
+              <option name="mapperPackage" value="com.bosssoft.bes.basedata.center.entity" />
+              <option name="mapperPostfix" value="Mapper" />
+              <option name="moduleRootPath" value="$PROJECT_DIR$/boss-bes-basedata-center-dao" />
+              <option name="name" value="t_subject" />
+              <option name="primaryKey" value="subject_id" />
+              <option name="resourcePath" value="src/main/resources" />
+              <option name="sourcePath" value="src/main/java" />
+              <option name="tableName" value="t_subject" />
+              <option name="useExample" value="true" />
+              <option name="xmlPackage" value="mapper" />
+            </TableConfig>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

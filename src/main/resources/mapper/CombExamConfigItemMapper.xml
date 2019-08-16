@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bosssoft.bes.basedata.center.dao.mapper.CombExamConfigItemMapper">
+  <resultMap id="BaseResultMap" type="com.bosssoft.bes.basedata.center.dao.domain.CombExamConfigItem">
+    <id column="comb_exam_config_item_id" jdbcType="BIGINT" property="combExamConfigItemId" />
+    <result column="subject_type_id" jdbcType="BIGINT" property="subjectTypeId" />
+    <result column="comb_exam_id" jdbcType="BIGINT" property="combExamId" />
+    <result column="category_id" jdbcType="BIGINT" property="categoryId" />
+    <result column="num" jdbcType="INTEGER" property="num" />
+    <result column="difficult" jdbcType="INTEGER" property="difficult" />
+    <result column="score" jdbcType="DECIMAL" property="score" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    comb_exam_config_item_id, subject_type_id, comb_exam_id, category_id, num, difficult, 
+    score
+  </sql>
+  <select id="selectByExample" parameterType="com.bosssoft.bes.basedata.center.dao.example.CombExamConfigItemExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_comb_exam_config_item
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_comb_exam_config_item
+    where comb_exam_config_item_id = #{combExamConfigItemId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_comb_exam_config_item
+    where comb_exam_config_item_id = #{combExamConfigItemId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bosssoft.bes.basedata.center.dao.example.CombExamConfigItemExample">
+    delete from t_comb_exam_config_item
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" keyColumn="comb_exam_config_item_id" keyProperty="combExamConfigItemId" parameterType="com.bosssoft.bes.basedata.center.dao.domain.CombExamConfigItem" useGeneratedKeys="true">
+    insert into t_comb_exam_config_item (subject_type_id, comb_exam_id, category_id, 
+      num, difficult, score
+      )
+    values (#{subjectTypeId,jdbcType=BIGINT}, #{combExamId,jdbcType=BIGINT}, #{categoryId,jdbcType=BIGINT}, 
+      #{num,jdbcType=INTEGER}, #{difficult,jdbcType=INTEGER}, #{score,jdbcType=DECIMAL}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="comb_exam_config_item_id" keyProperty="combExamConfigItemId" parameterType="com.bosssoft.bes.basedata.center.dao.domain.CombExamConfigItem" useGeneratedKeys="true">
+    insert into t_comb_exam_config_item
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="subjectTypeId != null">
+        subject_type_id,
+      </if>
+      <if test="combExamId != null">
+        comb_exam_id,
+      </if>
+      <if test="categoryId != null">
+        category_id,
+      </if>
+      <if test="num != null">
+        num,
+      </if>
+      <if test="difficult != null">
+        difficult,
+      </if>
+      <if test="score != null">
+        score,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="subjectTypeId != null">
+        #{subjectTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="combExamId != null">
+        #{combExamId,jdbcType=BIGINT},
+      </if>
+      <if test="categoryId != null">
+        #{categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="num != null">
+        #{num,jdbcType=INTEGER},
+      </if>
+      <if test="difficult != null">
+        #{difficult,jdbcType=INTEGER},
+      </if>
+      <if test="score != null">
+        #{score,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bosssoft.bes.basedata.center.dao.example.CombExamConfigItemExample" resultType="java.lang.Long">
+    select count(*) from t_comb_exam_config_item
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_comb_exam_config_item
+    <set>
+      <if test="record.combExamConfigItemId != null">
+        comb_exam_config_item_id = #{record.combExamConfigItemId,jdbcType=BIGINT},
+      </if>
+      <if test="record.subjectTypeId != null">
+        subject_type_id = #{record.subjectTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="record.combExamId != null">
+        comb_exam_id = #{record.combExamId,jdbcType=BIGINT},
+      </if>
+      <if test="record.categoryId != null">
+        category_id = #{record.categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="record.num != null">
+        num = #{record.num,jdbcType=INTEGER},
+      </if>
+      <if test="record.difficult != null">
+        difficult = #{record.difficult,jdbcType=INTEGER},
+      </if>
+      <if test="record.score != null">
+        score = #{record.score,jdbcType=DECIMAL},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_comb_exam_config_item
+    set comb_exam_config_item_id = #{record.combExamConfigItemId,jdbcType=BIGINT},
+      subject_type_id = #{record.subjectTypeId,jdbcType=BIGINT},
+      comb_exam_id = #{record.combExamId,jdbcType=BIGINT},
+      category_id = #{record.categoryId,jdbcType=BIGINT},
+      num = #{record.num,jdbcType=INTEGER},
+      difficult = #{record.difficult,jdbcType=INTEGER},
+      score = #{record.score,jdbcType=DECIMAL}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bosssoft.bes.basedata.center.dao.domain.CombExamConfigItem">
+    update t_comb_exam_config_item
+    <set>
+      <if test="subjectTypeId != null">
+        subject_type_id = #{subjectTypeId,jdbcType=BIGINT},
+      </if>
+      <if test="combExamId != null">
+        comb_exam_id = #{combExamId,jdbcType=BIGINT},
+      </if>
+      <if test="categoryId != null">
+        category_id = #{categoryId,jdbcType=BIGINT},
+      </if>
+      <if test="num != null">
+        num = #{num,jdbcType=INTEGER},
+      </if>
+      <if test="difficult != null">
+        difficult = #{difficult,jdbcType=INTEGER},
+      </if>
+      <if test="score != null">
+        score = #{score,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where comb_exam_config_item_id = #{combExamConfigItemId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bosssoft.bes.basedata.center.dao.domain.CombExamConfigItem">
+    update t_comb_exam_config_item
+    set subject_type_id = #{subjectTypeId,jdbcType=BIGINT},
+      comb_exam_id = #{combExamId,jdbcType=BIGINT},
+      category_id = #{categoryId,jdbcType=BIGINT},
+      num = #{num,jdbcType=INTEGER},
+      difficult = #{difficult,jdbcType=INTEGER},
+      score = #{score,jdbcType=DECIMAL}
+    where comb_exam_config_item_id = #{combExamConfigItemId,jdbcType=BIGINT}
+  </update>
+</mapper>

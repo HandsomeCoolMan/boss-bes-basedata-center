@@ -1,0 +1,4 @@
+com\bosssoft\bes\basedata\center\pojo\exception\BaseException.class
+com\bosssoft\bes\basedata\center\pojo\common\CommonRequest.class
+com\bosssoft\bes\basedata\center\pojo\exception\BusinessException.class
+com\bosssoft\bes\basedata\center\pojo\common\CommonResponse.class

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/boss-bes-basedata-center-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/boss-bes-basedata-center-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/boss-bes-basedata-center-pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/boss-bes-basedata-center-service/pom.xml" />
+        <option value="$PROJECT_DIR$/boss-bes-basedata-center-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/api/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/boss-bes-basedata-center-parent/basedata.center.utils/pom.xml" />
+        <option value="$PROJECT_DIR$/boss-bes-basedata-center-parent/com.boss.bes.basedata.utils/pom.xml" />
+        <option value="$PROJECT_DIR$/boss-bes-basedata-pojo/basedata.center.dao/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Google Web Toolkit</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="boss-bes-basedata-center-pojo" />
+        <module name="boss-bes-basedata-center-utils" />
+        <module name="boss-bes-basedata-center-service" />
+        <module name="boss-bes-basedata-center-dao" />
+        <module name="boss-bes-basedata-center-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="boss-bes-basedata-center-api" target="1.8" />
+      <module name="boss-bes-basedata-center-dao" target="1.8" />
+      <module name="boss-bes-basedata-center-parent" target="1.5" />
+      <module name="boss-bes-basedata-center-pojo" target="1.8" />
+      <module name="boss-bes-basedata-center-service" target="1.8" />
+      <module name="boss-bes-basedata-center-utils" target="1.8" />
+      <module name="boss-bes-basedata-pojo" target="1.5" />
+      <module name="boss-bes-basedata-utils" target="1.5" />
+      <module name="eurekaserver" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boss-bes-basedata-center-api" options="" />
+      <module name="eurekaserver" options="-parameters" />
+    </option>
+  </component>
+</project>
