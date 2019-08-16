@@ -45,6 +45,7 @@ public class DictionaryController extends BaseController {
      * @param commonRequest
      * @return: protocol.CommonResponse
      */
+    @Log
     @Override
     @RequestMapping(value = "add",method = RequestMethod.POST)
     public CommonResponse add(@RequestBody  CommonRequest commonRequest) {
