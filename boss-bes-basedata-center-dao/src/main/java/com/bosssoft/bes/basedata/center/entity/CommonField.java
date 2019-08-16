@@ -1,5 +1,9 @@
 package com.bosssoft.bes.basedata.center.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
@@ -12,14 +16,17 @@ public class CommonField {
     /**
      * 机构id
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     protected Long orgId;
     /**
      * 机构下公司id
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     protected Long companyId;
     /**
      * 通过id到数据字典中查询创建者
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     protected Long createdBy;
     /**
      * 创建日期
@@ -28,6 +35,7 @@ public class CommonField {
     /**
      * 通过id到数据字典中查询修改者
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     protected Long updatedBy;
     /**
      * 修改日期
@@ -36,6 +44,7 @@ public class CommonField {
     /**
      * 版本，为Date.getTime()
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     protected Long version;
 
     public CommonField() {

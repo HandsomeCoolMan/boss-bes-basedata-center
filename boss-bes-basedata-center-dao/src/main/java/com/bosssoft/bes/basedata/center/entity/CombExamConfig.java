@@ -1,5 +1,9 @@
 package com.bosssoft.bes.basedata.center.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,12 +12,14 @@ import java.util.Date;
  * t_comb_exam_config表
  *
  */
-public class CombExamConfig implements Serializable {
+public class CombExamConfig extends CommonField implements Serializable {
 
     private static final long serialVersionUID = 3187412730553408795L;
     /**
      * 组卷配置ID
      */
+    @Id
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long combExamId;
 
     /**
@@ -30,41 +36,6 @@ public class CombExamConfig implements Serializable {
      * 标记位
      */
     private Byte status;
-
-    /**
-     * 组织机构ID
-     */
-    private Long orgId;
-
-    /**
-     * 公司ID
-     */
-    private Long companyId;
-
-    /**
-     * 创建人
-     */
-    private Long createdBy;
-
-    /**
-     * 创建时间
-     */
-    private Date createdTime;
-
-    /**
-     * 修改人
-     */
-    private Long updatedBy;
-
-    /**
-     * 修改时间
-     */
-    private Date updatedTime;
-
-    /**
-     * 版本
-     */
-    private Long version;
 
     public Long getCombExamId() {
         return combExamId;
@@ -98,59 +69,20 @@ public class CombExamConfig implements Serializable {
         this.status = status;
     }
 
-    public Long getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
-    }
-
-    public Long getCompanyId() {
-        return companyId;
-    }
-
-    public void setCompanyId(Long companyId) {
-        this.companyId = companyId;
-    }
-
-    public Long getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(Long createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Date getCreatedTime() {
-        return createdTime;
-    }
-
-    public void setCreatedTime(Date createdTime) {
-        this.createdTime = createdTime;
-    }
-
-    public Long getUpdatedBy() {
-        return updatedBy;
-    }
-
-    public void setUpdatedBy(Long updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    public Date getUpdatedTime() {
-        return updatedTime;
-    }
-
-    public void setUpdatedTime(Date updatedTime) {
-        this.updatedTime = updatedTime;
-    }
-
-    public Long getVersion() {
-        return version;
-    }
-
-    public void setVersion(Long version) {
-        this.version = version;
+    @Override
+    public String toString() {
+        return "CombExamConfig{" +
+                "combExamId=" + combExamId +
+                ", name='" + name + '\'' +
+                ", remark='" + remark + '\'' +
+                ", status=" + status +
+                ", orgId=" + orgId +
+                ", companyId=" + companyId +
+                ", createdBy=" + createdBy +
+                ", createdTime=" + createdTime +
+                ", updatedBy=" + updatedBy +
+                ", updatedTime=" + updatedTime +
+                ", version=" + version +
+                '}';
     }
 }

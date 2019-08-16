@@ -1,5 +1,9 @@
 package com.bosssoft.bes.basedata.center.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -7,10 +11,13 @@ import java.util.Date;
  * t_subject
  * @author 
  */
-public class Subject implements Serializable {
+public class Subject extends CommonField implements Serializable {
+
     /**
      * 题目id
      */
+    @Id
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long subjectId;
 
     /**
@@ -37,41 +44,6 @@ public class Subject implements Serializable {
      * 状态位
      */
     private Byte status;
-
-    /**
-     * 组织机构id
-     */
-    private Long orgId;
-
-    /**
-     * 公司id
-     */
-    private Long companyId;
-
-    /**
-     * 创建人
-     */
-    private Long createdBy;
-
-    /**
-     * 创建时间
-     */
-    private Date createdTime;
-
-    /**
-     * 修改人
-     */
-    private Long updatedBy;
-
-    /**
-     * 修改时间
-     */
-    private Date updatedTime;
-
-    /**
-     * 版本
-     */
-    private Long version;
 
     /**
      * 预留
@@ -138,62 +110,6 @@ public class Subject implements Serializable {
         this.status = status;
     }
 
-    public Long getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
-    }
-
-    public Long getCompanyId() {
-        return companyId;
-    }
-
-    public void setCompanyId(Long companyId) {
-        this.companyId = companyId;
-    }
-
-    public Long getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(Long createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Date getCreatedTime() {
-        return createdTime;
-    }
-
-    public void setCreatedTime(Date createdTime) {
-        this.createdTime = createdTime;
-    }
-
-    public Long getUpdatedBy() {
-        return updatedBy;
-    }
-
-    public void setUpdatedBy(Long updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    public Date getUpdatedTime() {
-        return updatedTime;
-    }
-
-    public void setUpdatedTime(Date updatedTime) {
-        this.updatedTime = updatedTime;
-    }
-
-    public Long getVersion() {
-        return version;
-    }
-
-    public void setVersion(Long version) {
-        this.version = version;
-    }
-
     public String getField1() {
         return field1;
     }
@@ -216,5 +132,27 @@ public class Subject implements Serializable {
 
     public void setField3(String field3) {
         this.field3 = field3;
+    }
+
+    @Override
+    public String toString() {
+        return "Subject{" +
+                "subjectId=" + subjectId +
+                ", subjectTypeId=" + subjectTypeId +
+                ", categoryId=" + categoryId +
+                ", name='" + name + '\'' +
+                ", difficulty=" + difficulty +
+                ", status=" + status +
+                ", field1='" + field1 + '\'' +
+                ", field2='" + field2 + '\'' +
+                ", field3='" + field3 + '\'' +
+                ", orgId=" + orgId +
+                ", companyId=" + companyId +
+                ", createdBy=" + createdBy +
+                ", createdTime=" + createdTime +
+                ", updatedBy=" + updatedBy +
+                ", updatedTime=" + updatedTime +
+                ", version=" + version +
+                '}';
     }
 }

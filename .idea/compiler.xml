@@ -6,14 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="boss-bes-basedata-center-api" />
+        <module name="api" />
         <module name="boss-bes-basedata-center-pojo" />
-        <module name="boss-bes-basedata-center-utils" />
         <module name="boss-bes-basedata-center-service" />
         <module name="boss-bes-basedata-center-dao" />
-        <module name="boss-bes-basedata-center-api" />
+        <module name="boss-bes-basedata-center-utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api" target="1.8" />
       <module name="boss-bes-basedata-center-api" target="1.8" />
       <module name="boss-bes-basedata-center-dao" target="1.8" />
       <module name="boss-bes-basedata-center-parent" target="1.5" />

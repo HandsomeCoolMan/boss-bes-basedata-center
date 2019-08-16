@@ -1,5 +1,11 @@
 package com.bosssoft.bes.basedata.center.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+
+import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -7,56 +13,32 @@ import java.util.Date;
  * t_category
  * @author 
  */
-public class Category implements Serializable{
+public class Category extends CommonField implements Serializable{
     /**
      * 题目类别ID
      */
+    @Id
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long categoryId;
 
     /**
-     * 类别名称
+     * 题目类别
      */
+    @NotNull(message = "题目类别不能为空！")
     private String name;
 
     /**
      * 父类别
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long parentId;
 
     /**
      * 状态位
      */
+    @Max(2)
     private Byte status;
 
-    /**
-     * 组织机构ID
-     */
-    private Long orgId;
-
-    /**
-     * 创建人
-     */
-    private Long createdBy;
-
-    /**
-     * 创建时间
-     */
-    private Date createdTime;
-
-    /**
-     * 修改人
-     */
-    private Long updatedBy;
-
-    /**
-     * 修改时间
-     */
-    private Date updatedTime;
-
-    /**
-     * 版本
-     */
-    private Long version;
 
     private static final long serialVersionUID = 1L;
 
@@ -92,51 +74,19 @@ public class Category implements Serializable{
         this.status = status;
     }
 
-    public Long getOrgId() {
-        return orgId;
-    }
-
-    public void setOrgId(Long orgId) {
-        this.orgId = orgId;
-    }
-
-    public Long getCreatedBy() {
-        return createdBy;
-    }
-
-    public void setCreatedBy(Long createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Date getCreatedTime() {
-        return createdTime;
-    }
-
-    public void setCreatedTime(Date createdTime) {
-        this.createdTime = createdTime;
-    }
-
-    public Long getUpdatedBy() {
-        return updatedBy;
-    }
-
-    public void setUpdatedBy(Long updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    public Date getUpdatedTime() {
-        return updatedTime;
-    }
-
-    public void setUpdatedTime(Date updatedTime) {
-        this.updatedTime = updatedTime;
-    }
-
-    public Long getVersion() {
-        return version;
-    }
-
-    public void setVersion(Long version) {
-        this.version = version;
+    @Override
+    public String toString() {
+        return "Category{" +
+                "categoryId=" + categoryId +
+                ", name='" + name + '\'' +
+                ", parentId=" + parentId +
+                ", status=" + status +
+                ", orgId=" + orgId +
+                ", createdBy=" + createdBy +
+                ", createdTime=" + createdTime +
+                ", updatedBy=" + updatedBy +
+                ", updatedTime=" + updatedTime +
+                ", version=" + version +
+                '}';
     }
 }
