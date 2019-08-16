@@ -155,4 +155,5 @@ public class Subject extends CommonField implements Serializable {
                 ", version=" + version +
                 '}';
     }
+
 }
