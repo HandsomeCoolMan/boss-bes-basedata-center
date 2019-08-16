@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -13,6 +14,7 @@ import java.util.Date;
  * t_category
  * @author 
  */
+@Table(name="t_category")
 public class Category extends CommonField implements Serializable{
     /**
      * 题目类别ID

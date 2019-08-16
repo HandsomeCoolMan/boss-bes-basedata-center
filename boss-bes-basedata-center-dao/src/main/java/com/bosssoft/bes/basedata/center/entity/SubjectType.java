@@ -1,42 +1,18 @@
 package com.bosssoft.bes.basedata.center.entity;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
-
 public class SubjectType extends CommonField implements Serializable {
-
-    /**
-     * 题目类型ID
-     */
-    @Id
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long subjectTypeId;
-
-    /**
-     * 题目类型
-     */
-    @NotNull(message = "题目类别不能为空！")
+    private Long SubjectTypeId;
     private String name;
-
-    /**
-     * 状态位
-     */
-    @Max(2)
     private Byte status;
 
     public Long getSubjectTypeId() {
-        return subjectTypeId;
+        return SubjectTypeId;
     }
 
     public void setSubjectTypeId(Long subjectTypeId) {
-        this.subjectTypeId = subjectTypeId;
+        SubjectTypeId = subjectTypeId;
     }
 
     public String getName() {
@@ -58,7 +34,7 @@ public class SubjectType extends CommonField implements Serializable {
     @Override
     public String toString() {
         return "SubjectType{" +
-                "SubjectTypeId=" + subjectTypeId +
+                "SubjectTypeId=" + SubjectTypeId +
                 ", name='" + name + '\'' +
                 ", status=" + status +
                 ", orgId=" + orgId +
@@ -69,5 +45,4 @@ public class SubjectType extends CommonField implements Serializable {
                 ", version=" + version +
                 '}';
     }
-
 }

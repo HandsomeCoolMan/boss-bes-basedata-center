@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -11,6 +12,7 @@ import java.util.Date;
  * t_subject
  * @author 
  */
+@Table(name="t_subject")
 public class Subject extends CommonField implements Serializable {
 
     /**

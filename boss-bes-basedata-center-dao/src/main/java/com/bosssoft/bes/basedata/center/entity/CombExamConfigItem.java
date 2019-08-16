@@ -1,5 +1,6 @@
 package com.bosssoft.bes.basedata.center.entity;
 
+import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
@@ -7,6 +8,7 @@ import java.io.Serializable;
  * t_comb_exam_config_item表
  *
  */
+@Table(name="t_comb_exam_config_item")
 public class CombExamConfigItem implements Serializable {
     /**
      * 组卷配置明细项ID
