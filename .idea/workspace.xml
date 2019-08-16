@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b6c6933-5c65-446b-9b50-2432aadd94bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="3b6c6933-5c65-446b-9b50-2432aadd94bb" name="Default Changelist" comment="忘记改了啥了">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ParamCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ParamCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidationResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidationResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/META-INF/boss-bes-basedata-center-dao.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-pojo/target/classes/META-INF/boss-bes-basedata-center-pojo.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-service/target/classes/META-INF/boss-bes-basedata-center-service.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/boss-bes-basedata-center-parent/target/" />
@@ -60,10 +64,60 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+            <state relative-caret-position="200">
+              <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boss-bes-basedata-center-pojo/src/main/java/com/bosssoft/bes/basedata/center/pojo/vo/DictionaryVO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidationResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidatorImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="21" column="65" lean-forward="true" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/ApiApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1105#1106#0" expanded="true" />
+                <element signature="e#1170#1171#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,15 +182,15 @@
         <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ValidCheck.java" />
         <option value="$PROJECT_DIR$/api/pom.xml" />
         <option value="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/Category.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidationResult.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidatorImpl.java" />
         <option value="$PROJECT_DIR$/boss-bes-basedata-center-pojo/src/main/java/com/bosssoft/bes/basedata/center/pojo/vo/DictionaryVO.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ParamCheck.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/CategoryController.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/ApiApplication.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java" />
         <option value="$PROJECT_DIR$/api/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ParamCheck.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidationResult.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/CategoryController.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java" />
       </list>
     </option>
   </component>
@@ -194,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -264,13 +319,51 @@
             </path>
             <path>
               <item name="boss-bes-basedata-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boss-bes-basedata-center-pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boss-bes-basedata-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boss-bes-basedata-center-pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boss-bes-basedata-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boss-bes-basedata-center-pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boss-bes-basedata-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boss-bes-basedata-center-pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boss-bes-basedata-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boss-bes-basedata-center-pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boss-bes-basedata-center" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boss-bes-basedata-center-pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boss-bes-basedata-center" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,12 +498,21 @@
       <workItem from="1565911010289" duration="2703000" />
       <workItem from="1565916999084" duration="1361000" />
       <workItem from="1565922865999" duration="1003000" />
-      <workItem from="1565925031213" duration="1259000" />
+      <workItem from="1565925031213" duration="3023000" />
+      <workItem from="1565935196636" duration="1783000" />
     </task>
+    <task id="LOCAL-00001" summary="改了端口和添加日志注解">
+      <created>1565926693513</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565926693513</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187460000" />
+    <option name="totallyTimeSpent" value="191007000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,8 +525,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49822694" visible="true" weight="0.371059" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49822694" visible="true" weight="0.37752628" />
       <window_info id="Structure" order="1" sideWeight="0.50177306" side_tool="true" weight="0.30881163" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -450,7 +553,7 @@
       <window_info anchor="bottom" id="FindBugs-IDEA" order="15" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32978722" />
       <window_info anchor="bottom" id="Java Enterprise" order="17" weight="0.32978722" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="18" sideWeight="0.4987874" visible="true" weight="0.38721138" />
+      <window_info anchor="bottom" id="Run Dashboard" order="18" sideWeight="0.4987874" visible="true" weight="0.3445826" />
       <window_info anchor="right" id="Coverage" order="0" sideWeight="0.5032258" side_tool="true" visible="true" weight="0.114379086" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -466,6 +569,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="改了端口和添加日志注解" />
+    <option name="LAST_COMMIT_MESSAGE" value="改了端口和添加日志注解" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -734,26 +841,6 @@
         <state relative-caret-position="-2152" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/boss-bes-basedata-center-pojo/src/main/java/com/bosssoft/bes/basedata/center/pojo/vo/DictionaryVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ParamCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -774,34 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/CategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ValidCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -816,42 +875,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidationResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/resources/log4j.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/ApiApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1170#1171#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -862,10 +889,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ValidCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ParamCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidationResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/boss-bes-basedata-center-pojo/src/main/java/com/bosssoft/bes/basedata/center/pojo/vo/DictionaryVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/validator/ValidatorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="21" column="65" lean-forward="true" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/ApiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+        <state relative-caret-position="200">
+          <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

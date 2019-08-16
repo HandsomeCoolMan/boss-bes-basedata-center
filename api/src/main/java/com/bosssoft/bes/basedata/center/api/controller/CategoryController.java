@@ -3,7 +3,6 @@ package com.bosssoft.bes.basedata.center.api.controller;
 import protocol.CommonRequest;
 import protocol.CommonResponse;
 
-import java.util.List;
 
 public class CategoryController extends BaseController {
     @Override

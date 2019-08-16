@@ -32,6 +32,7 @@ public class ParamCheck {
         logger.info("记录开始------------------------------------------------------");
         for (Object arg:joinPoint.getArgs()) {
             logger.info("请求参数为:"+arg.toString());
+            System.out.println("请求参数为："+arg.toString());
             CommonRequest commonRequest =(CommonRequest) Converter.getObjectFromJson(JSON.toJSONString(arg),CommonRequest.class);
             DictionaryVO dictionaryVO = (DictionaryVO) Converter.getObjectFromJson(JSON.toJSONString(commonRequest.getBody().getData()),DictionaryVO.class);
 

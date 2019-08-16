@@ -25,7 +25,7 @@ public class ValidationResult {
         this.errorMsgMap = errorMsgMap;
     }
 
-    //实现通用的通过格式化字符串信息获取错误结果的msg方法
+    //通过字符串信息获取错误结果的msg方法
     public String getErrMsg(){
         return errorMsgMap.toString();
     }

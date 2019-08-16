@@ -46,6 +46,7 @@ public class DictionaryController extends BaseController {
      * @return: protocol.CommonResponse
      */
     @Log
+    @ValidCheck
     @Override
     @RequestMapping(value = "add",method = RequestMethod.POST)
     public CommonResponse add(@RequestBody  CommonRequest commonRequest) {
@@ -59,7 +60,9 @@ public class DictionaryController extends BaseController {
         //采用validator验证
         ValidationResult result = validator.validate(dictionaryVO);
         if(result.isHasErrors()){
-            return CommonResponse.create("1","2","3",false,result.getErrMsg());
+            //这里面存的就是错误信息
+            result.getErrMsg();
+            return CommonResponse.create("1","1","1",false,result.getErrMsg());
         }
 
         //dictionaryService.add(dictionary);
