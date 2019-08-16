@@ -1,7 +1,9 @@
 package com.bosssoft.bes.basedata.center.entity;
 
+import javax.persistence.Table;
 import java.io.Serializable;
 
+@Table(name="t_subject_type")
 public class SubjectType extends CommonField implements Serializable {
     private Long SubjectTypeId;
     private String name;

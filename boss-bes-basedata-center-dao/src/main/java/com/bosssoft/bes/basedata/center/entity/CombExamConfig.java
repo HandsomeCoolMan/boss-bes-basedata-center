@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -12,6 +13,7 @@ import java.util.Date;
  * t_comb_exam_config表
  *
  */
+@Table(name="t_comb_exam_config")
 public class CombExamConfig extends CommonField implements Serializable {
 
     private static final long serialVersionUID = 3187412730553408795L;
