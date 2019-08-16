@@ -65,7 +65,7 @@ public class DictionaryController extends BaseController {
             return CommonResponse.create("1","1","1",false,result.getErrMsg());
         }
 
-        //dictionaryService.add(dictionary);
+        dictionaryService.add(dictionary);
         return CommonResponse.create("1","2","3",false,"添加成功！");
     }
 

@@ -1,5 +1,6 @@
 package com.bosssoft.bes.basedata.center.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
@@ -32,6 +33,7 @@ public class CommonField {
     /**
      * 创建日期
      */
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss",timezone = "Asia/Shanghai")
     protected Date createdTime;
     /**
      * 通过id到数据字典中查询修改者
@@ -41,6 +43,7 @@ public class CommonField {
     /**
      * 修改日期
      */
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss",timezone = "Asia/Shanghai")
     protected Date updatedTime;
     /**
      * 版本，为Date.getTime()
