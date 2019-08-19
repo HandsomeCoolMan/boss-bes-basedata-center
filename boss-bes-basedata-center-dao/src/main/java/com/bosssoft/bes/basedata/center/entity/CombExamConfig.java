@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -27,6 +29,7 @@ public class CombExamConfig extends CommonField implements Serializable {
     /**
      * 配置名
      */
+    @NotNull(message = "配置名不能为空！")
     private String name;
 
     /**
@@ -37,6 +40,7 @@ public class CombExamConfig extends CommonField implements Serializable {
     /**
      * 标记位
      */
+    @Max(2)
     private Byte status;
 
     public Long getCombExamId() {

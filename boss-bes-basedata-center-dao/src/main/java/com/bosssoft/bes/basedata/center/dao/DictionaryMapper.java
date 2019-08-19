@@ -8,6 +8,9 @@ import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
+/**
+ * @author
+ */
 @org.apache.ibatis.annotations.Mapper
 public interface DictionaryMapper extends Mapper<Dictionary>{
 

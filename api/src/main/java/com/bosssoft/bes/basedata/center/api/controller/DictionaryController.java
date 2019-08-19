@@ -22,6 +22,9 @@ import utils.SnowFlake;
 import java.util.List;
 
 
+/**
+ * @author
+ */
 @CrossOrigin("*")
 @RestController
 @RequestMapping(value = "/dictionary")
@@ -33,10 +36,10 @@ public class DictionaryController extends BaseController {
     @Autowired
     private ValidatorImpl validator;
 
-    //返回给前端的消息
+    /**返回给前端的消息*/
     private String message;
 
-    //雪花算法生成工具
+    /**雪花算法生成工具*/
     private SnowFlake snowFlake = new SnowFlake(2,3);
 
     /**

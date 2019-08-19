@@ -8,8 +8,11 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @EnableAspectJAutoProxy
-@SpringBootApplication(scanBasePackages ={"com.bosssoft.bes.basedata.center.service","com.bosssoft.bes.basedata.**.controller",
-        "com.bosssoft.hr.train.bossbescommonlogging.annotation","com.bosssoft.bes.basedata.center.api.aop",
+@SpringBootApplication(scanBasePackages ={
+        "com.bosssoft.bes.basedata.center.service",
+        "com.bosssoft.bes.basedata.**.controller",
+        "com.bosssoft.hr.train.bossbescommonlogging.annotation",
+        "com.bosssoft.bes.basedata.center.api.aop",
         "com.bosssoft.bes.basedata.center.api.validator"
 })
 @MapperScan(basePackages ="com.bosssoft.bes.basedata.center.dao")

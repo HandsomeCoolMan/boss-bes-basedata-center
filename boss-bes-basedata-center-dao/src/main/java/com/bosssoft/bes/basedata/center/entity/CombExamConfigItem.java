@@ -1,33 +1,42 @@
 package com.bosssoft.bes.basedata.center.entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
  * 组卷配置明细实体
  * t_comb_exam_config_item表
- *
+ * @author
  */
 @Table(name="t_comb_exam_config_item")
-public class CombExamConfigItem implements Serializable {
+public class CombExamConfigItem extends CommonField implements Serializable {
     /**
      * 组卷配置明细项ID
      */
+    @Id
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long combExamConfigItemId;
 
     /**
      * 题型ID
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long subjectTypeId;
 
     /**
      * 组卷配置ID
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long combExamId;
 
     /**
      * 题目类别ID
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long categoryId;
 
     /**
@@ -38,6 +47,7 @@ public class CombExamConfigItem implements Serializable {
     /**
      * 题目难度
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long difficult;
 
     /**
@@ -101,5 +111,25 @@ public class CombExamConfigItem implements Serializable {
 
     public void setScore(double score) {
         this.score = score;
+    }
+
+    @Override
+    public String toString() {
+        return "CombExamConfigItem{" +
+                "combExamConfigItemId=" + combExamConfigItemId +
+                ", subjectTypeId=" + subjectTypeId +
+                ", combExamId=" + combExamId +
+                ", categoryId=" + categoryId +
+                ", num=" + num +
+                ", difficult=" + difficult +
+                ", score=" + score +
+                ", orgId=" + orgId +
+                ", companyId=" + companyId +
+                ", createdBy=" + createdBy +
+                ", createdTime=" + createdTime +
+                ", updatedBy=" + updatedBy +
+                ", updatedTime=" + updatedTime +
+                ", version=" + version +
+                '}';
     }
 }
