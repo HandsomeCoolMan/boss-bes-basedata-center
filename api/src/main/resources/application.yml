@@ -6,8 +6,16 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: boss-bes-basedata
 mapper:
   mappers:
     - tk.mybatis.mapper.common.Mapper
   notEmpty: true
-
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: 172.20.0.219:8761
+  client:
+    serviceUrl:
+      defaultZone: http://172.20.0.219:8761/eureka/

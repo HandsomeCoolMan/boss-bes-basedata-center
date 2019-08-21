@@ -25,8 +25,9 @@ public class DictionaryServiceImpl implements DictionaryService<Dictionary>  {
         try {
             return dictionaryMapper.delete(dictionary);
         } catch (Exception e) {
-            throw  new BusinessException(10003,e.getMessage(),e);
+            //throw  new BusinessException(e.getMessage(),e,"10003");
         }
+        return 0;
     }
 
     @Override
@@ -35,8 +36,9 @@ public class DictionaryServiceImpl implements DictionaryService<Dictionary>  {
             System.out.println(dictionary.toString());
             return dictionaryMapper.updateByPrimaryKeySelective(dictionary);
         } catch (Exception e) {
-            throw  new BusinessException(10003,e.getMessage(),e);
+            //throw  new BusinessException(e.getMessage(),e,"10003");
         }
+        return 0;
     }
 
     @Override
@@ -44,8 +46,9 @@ public class DictionaryServiceImpl implements DictionaryService<Dictionary>  {
         try {
             return dictionaryMapper.select(dictionary);
         } catch (Exception e) {
-            throw  new BusinessException(10004,e.getMessage(),e);
+           // throw  new BusinessException(e.getMessage(),e,"10004");
         }
+        return null;
     }
 
 }

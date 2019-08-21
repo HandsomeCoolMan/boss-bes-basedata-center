@@ -1,6 +1,7 @@
 package com.bosssoft.bes.basedata.center.api.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.bosssoft.bes.basedata.center.api.aop.ValidCheck;
 import com.bosssoft.bes.basedata.center.api.validator.ValidationResult;
 import com.bosssoft.bes.basedata.center.api.validator.ValidatorImpl;
 import com.bosssoft.bes.basedata.center.entity.Dictionary;
@@ -16,6 +17,8 @@ import protocol.CommonResponse;
 
 import utils.Converter;
 import utils.SnowFlake;
+import utils.validator.ValidationResult;
+import utils.validator.ValidatorImpl;
 
 
 import java.util.List;
