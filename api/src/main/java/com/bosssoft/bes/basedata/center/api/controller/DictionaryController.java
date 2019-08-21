@@ -32,13 +32,14 @@ public class DictionaryController extends BaseController {
     @Autowired
     private DictionaryService<Dictionary> dictionaryService;
 
+    /**参数校验工具类*/
     @Autowired
     private ValidatorImpl validator;
 
     /**返回给前端的消息*/
     private String message;
 
-    /**雪花算法生成工具*/
+    /**雪花算法生成工具类*/
     private SnowFlake snowFlake = new SnowFlake(2,3);
 
     /**
@@ -53,6 +54,7 @@ public class DictionaryController extends BaseController {
     public CommonResponse add(@RequestBody  CommonRequest commonRequest) {
         
         DictionaryVO dictionaryVO = (DictionaryVO) Converter.getObjectFromJson(JSON.toJSONString(commonRequest.getBody().getData()),DictionaryVO.class);
+
         System.out.println("controller获得的参数："+dictionaryVO.toString());
 
         Dictionary dictionary = new Dictionary();
@@ -65,7 +67,6 @@ public class DictionaryController extends BaseController {
             result.getErrMsg();
             return CommonResponse.create("1","1","1",false,result.getErrMsg());
         }
-
         dictionaryService.add(dictionary);
         return CommonResponse.create("1","2","3",false,"添加成功！");
     }
