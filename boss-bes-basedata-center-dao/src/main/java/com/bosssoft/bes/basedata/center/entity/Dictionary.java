@@ -115,6 +115,7 @@ public class Dictionary extends CommonField implements Serializable {
                 ", remark='" + remark + '\'' +
                 ", status=" + status +
                 ", orgId=" + orgId +
+                ", companyId=" + companyId +
                 ", createdBy=" + createdBy +
                 ", createdTime=" + createdTime +
                 ", updatedBy=" + updatedBy +

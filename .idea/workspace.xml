@@ -2,16 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b6c6933-5c65-446b-9b50-2432aadd94bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/pan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_server_unknown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/ApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/ApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ParamCheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/aop/ValidCheck.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/dao/DictionaryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/dao/DictionaryMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/CombExamConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/CombExamConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/CombExamConfigItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/CombExamConfigItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/CommonField.class" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/CommonField.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/SubjectType.java" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/src/main/java/com/bosssoft/bes/basedata/center/entity/SubjectType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/CombExamConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/CombExamConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/CombExamConfigItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/CombExamConfigItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/Dictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/Dictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/Subject.class" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/Subject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-parent/boss-bes-basedata-center-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-parent/boss-bes-basedata-center-parent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-pojo/src/main/java/com/bosssoft/bes/basedata/center/pojo/exception/BaseException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-pojo/src/main/java/com/bosssoft/bes/basedata/center/pojo/exception/BusinessException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-pojo/target/classes/com/bosssoft/bes/basedata/center/pojo/exception/BaseException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-pojo/target/classes/com/bosssoft/bes/basedata/center/pojo/exception/BusinessException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-service/src/main/java/com/bosssoft/bes/basedata/center/service/impl/DictionaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-service/src/main/java/com/bosssoft/bes/basedata/center/service/impl/DictionaryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-service/target/classes/com/bosssoft/bes/basedata/center/service/impl/DictionaryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-service/target/classes/com/bosssoft/bes/basedata/center/service/impl/DictionaryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-utils/src/main/java/snowflake/SnowFlake.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-utils/src/main/java/string_operation/validation_string/ValidatorString.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +112,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/IdeaProjects/IdeaProjects/Eureka" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -145,14 +164,7 @@
     </option>
     <option name="contentProportion" value="0.1662531" />
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiApplication (2)">
-    <configuration name="ApiApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="boss-bes-basedata-center-api" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bosssoft.bes.basedata.center.api.ApiApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="ApiApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="api" />
       <extension name="coverage">
@@ -166,19 +178,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="boss-bes-basedata-center-api" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bosssoft.bes.basedata.center.api.ApiApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Spring Boot.ApiApplication" />
-      <item itemvalue="Spring Boot.ApiApplication (1)" />
-      <item itemvalue="Spring Boot.ApiApplication (2)" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ApiApplication (2)" />
@@ -189,7 +188,12 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1a995a3a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -253,7 +257,9 @@
       <workItem from="1565935196636" duration="2026000" />
       <workItem from="1565969082600" duration="222000" />
       <workItem from="1566058610357" duration="173000" />
-      <workItem from="1566176637530" duration="886000" />
+      <workItem from="1566176637530" duration="5734000" />
+      <workItem from="1566262151639" duration="4687000" />
+      <workItem from="1566348645683" duration="6936000" />
     </task>
     <task id="LOCAL-00001" summary="改了端口和添加日志注解">
       <created>1565926693513</created>
@@ -269,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565937004373</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加了一些注释，修改了entity">
+      <created>1566177956126</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566177956126</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -300,7 +313,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="改了端口和添加日志注解" />
     <MESSAGE value="忘记改了啥了" />
-    <option name="LAST_COMMIT_MESSAGE" value="忘记改了啥了" />
+    <MESSAGE value="添加了一些注释，修改了entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了一些注释，修改了entity" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

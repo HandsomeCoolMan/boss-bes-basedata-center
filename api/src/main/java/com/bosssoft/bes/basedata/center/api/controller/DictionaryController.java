@@ -1,7 +1,6 @@
 package com.bosssoft.bes.basedata.center.api.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.bosssoft.bes.basedata.center.api.aop.ValidCheck;
 import com.bosssoft.bes.basedata.center.api.validator.ValidationResult;
 import com.bosssoft.bes.basedata.center.api.validator.ValidatorImpl;
 import com.bosssoft.bes.basedata.center.entity.Dictionary;
@@ -49,7 +48,6 @@ public class DictionaryController extends BaseController {
      * @return: protocol.CommonResponse
      */
     @Log
-    @ValidCheck
     @Override
     @RequestMapping(value = "add",method = RequestMethod.POST)
     public CommonResponse add(@RequestBody  CommonRequest commonRequest) {

@@ -8,7 +8,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * t_category
@@ -84,6 +83,7 @@ public class Category extends CommonField implements Serializable{
                 ", parentId=" + parentId +
                 ", status=" + status +
                 ", orgId=" + orgId +
+                ", companyId=" + companyId +
                 ", createdBy=" + createdBy +
                 ", createdTime=" + createdTime +
                 ", updatedBy=" + updatedBy +

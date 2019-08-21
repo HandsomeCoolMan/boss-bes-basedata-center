@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -25,11 +26,13 @@ public class Subject extends CommonField implements Serializable {
     /**
      * 题目类型id
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long subjectTypeId;
 
     /**
      * 题目类别id
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long categoryId;
 
     /**
@@ -40,11 +43,13 @@ public class Subject extends CommonField implements Serializable {
     /**
      * 难度
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long difficulty;
 
     /**
      * 状态位
      */
+    @Max(2)
     private Byte status;
 
     /**
