@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +15,7 @@ import tk.mybatis.spring.annotation.MapperScan;
         "com.bosssoft.bes.basedata.center.service",
         "com.bosssoft.bes.basedata.**.controller",
         "com.bosssoft.hr.train.bossbescommonlogging.annotation",
-        "com.bosssoft.bes.basedata.center.api.validator"
+        "com.bosssoft.bes.basedata.center.api.validator",
         "com.bosssoft.bes.basedata.center.api.aop",
         "utils.validator"
 })

@@ -1,16 +1,13 @@
 package com.bosssoft.bes.basedata.center.api.controller;
 
+
 import com.alibaba.fastjson.JSON;
-import com.bosssoft.bes.basedata.center.api.aop.ValidCheck;
-import com.bosssoft.bes.basedata.center.api.validator.ValidationResult;
-import com.bosssoft.bes.basedata.center.api.validator.ValidatorImpl;
 import com.bosssoft.bes.basedata.center.entity.Dictionary;
 import com.bosssoft.bes.basedata.center.pojo.vo.DictionaryVO;
 import com.bosssoft.bes.basedata.center.service.DictionaryService;
+
 import com.bosssoft.hr.train.bossbescommonlogging.annotation.Log;
-
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.web.bind.annotation.*;
 import protocol.CommonRequest;
 import protocol.CommonResponse;

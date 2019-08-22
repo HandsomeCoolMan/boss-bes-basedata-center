@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b6c6933-5c65-446b-9b50-2432aadd94bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/boss-bes-basedata-center-pojo/src/main/java/com/bosssoft/bes/basedata/center/pojo/vo/CategoryVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/boss-bes-basedata-center-pojo/src/main/java/com/bosssoft/bes/basedata/center/pojo/vo/SubjectVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/target/classes/com/bosssoft/bes/basedata/center/entity/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-utils/target/classes/string_operation/validation_string/ValidatorString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/ApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/ApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/bosssoft/bes/basedata/center/api/controller/DictionaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-dao/boss-bes-basedata-center-dao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-dao/boss-bes-basedata-center-dao.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-parent/boss-bes-basedata-center-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-parent/boss-bes-basedata-center-parent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-pojo/boss-bes-basedata-center-pojo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-pojo/boss-bes-basedata-center-pojo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-service/boss-bes-basedata-center-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-service/boss-bes-basedata-center-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-service/target/classes/com/bosssoft/bes/basedata/center/service/impl/DictionaryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-service/target/classes/com/bosssoft/bes/basedata/center/service/impl/DictionaryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boss-bes-basedata-center-utils/boss-bes-basedata-center-utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/boss-bes-basedata-center-utils/boss-bes-basedata-center-utils.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,13 +87,15 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SpringCloudNetflix" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -103,16 +110,9 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\boss\source\boss-bes-basedata-center-api\src\main\java\com\boss\bes\basedata" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.bosssoft.bes.basedata.center.pojo.vo" />
       <recent name="com.bosssoft.bes.basedata.center.entity" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.bosssoft.bes.basedata.center.entity" />
-      <recent name="snowflake" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ideaworkspace\source\boss-bes-basedata-center-dao\src\main\java\com\bosssoft\bes\basedata\center\entity" />
@@ -120,6 +120,13 @@
       <recent name="D:\ideaworkspace\source\boss-bes-basedata-center-dao\src\main\resources" />
       <recent name="D:\workspace\boss\source\boss-bes-basedata-center-api\src\main\java" />
       <recent name="D:\workspace\boss\source\boss-bes-basedata-center-api\src\main\java\com\boss\bes\basedata\center\api\controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.bosssoft.bes.basedata.center.entity" />
+      <recent name="snowflake" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\boss\source\boss-bes-basedata-center-api\src\main\java\com\boss\bes\basedata" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -187,7 +194,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1a995a3a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@30653a1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -255,6 +262,10 @@
       <workItem from="1566058610357" duration="173000" />
       <workItem from="1566176637530" duration="886000" />
       <workItem from="1566178584221" duration="1605000" />
+      <workItem from="1566366480168" duration="11512000" />
+      <workItem from="1566383703163" duration="137000" />
+      <workItem from="1566383933202" duration="2313000" />
+      <workItem from="1566435855696" duration="2019000" />
     </task>
     <task id="LOCAL-00001" summary="改了端口和添加日志注解">
       <created>1565926693513</created>
