@@ -12,6 +12,7 @@
     <groupId>com.bosssoft.bes.basedata.center</groupId>
     <artifactId>api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>boss-bes-basedata-center-api</name>
     <description>database center api for Spring Boot</description>
     <properties>
