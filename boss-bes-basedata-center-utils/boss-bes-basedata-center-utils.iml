@@ -33,6 +33,9 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.1.8.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.bosssoft.hr.train:boss-bes-spring-boot-starter:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.bosssoft.hr.train:boss-bes-core-data:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.9.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.9" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.4" level="project" />
     <orderEntry type="library" name="Maven: cglib:cglib:3.2.12" level="project" />
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:7.1" level="project" />
@@ -66,7 +69,7 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.26" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.26" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
-    <orderEntry type="library" name="Maven: com.bosssoft.hr.train:boss-bes-common-fullcommonfield:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.bosssoft.hr.train:boss-bes-core-service-aop:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.bosssoft.hr.train:boss-bes-common-utils:1.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.9" level="project" />
@@ -96,9 +99,6 @@
     <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.38.Final" level="project" />
     <orderEntry type="library" name="Maven: io.projectreactor:reactor-core:3.2.11.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.9.1" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.9" level="project" />
     <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.1.7.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.1.7.RELEASE" level="project" />

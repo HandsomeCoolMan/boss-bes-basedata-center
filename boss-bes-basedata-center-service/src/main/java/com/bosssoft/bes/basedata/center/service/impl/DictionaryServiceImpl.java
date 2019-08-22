@@ -6,6 +6,7 @@ import com.bosssoft.bes.basedata.center.service.DictionaryService;
 import exception.BusinessException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -15,7 +16,14 @@ public class DictionaryServiceImpl implements DictionaryService<Dictionary>  {
     @Autowired
     private DictionaryMapper dictionaryMapper;
 
+    /**
+     * @Transactional 表示事务开启
+     *
+     * @param object
+     * @return: int
+     */
     @Override
+    @Transactional
     public int add(Dictionary object) {
         return dictionaryMapper.insert(object);
     }
