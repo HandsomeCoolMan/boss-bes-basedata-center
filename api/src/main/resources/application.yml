@@ -15,7 +15,7 @@ mapper:
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: 172.20.0.219:8761
+    instance-id: 172.20.0.219:8761:basedata
   client:
     serviceUrl:
       defaultZone: http://172.20.0.219:8761/eureka/

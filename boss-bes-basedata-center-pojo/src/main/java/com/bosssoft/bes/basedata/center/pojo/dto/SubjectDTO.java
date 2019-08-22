@@ -1,4 +1,4 @@
-package com.bosssoft.bes.basedata.center.pojo.vo;
+package com.bosssoft.bes.basedata.center.pojo.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
@@ -9,11 +9,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 题目类别VO
- * @author
+ * 题目DTO
+ * @author pan
  */
-public class CategoryVO implements Serializable {
-
+public class SubjectDTO implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
     /**
      * 题目类别id
@@ -85,7 +84,7 @@ public class CategoryVO implements Serializable {
 
     @Override
     public String toString() {
-        return "CategoryVO{" +
+        return "SubjectType{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", remark='" + remark + '\'' +
@@ -93,5 +92,4 @@ public class CategoryVO implements Serializable {
                 ", status=" + status +
                 '}';
     }
-
 }

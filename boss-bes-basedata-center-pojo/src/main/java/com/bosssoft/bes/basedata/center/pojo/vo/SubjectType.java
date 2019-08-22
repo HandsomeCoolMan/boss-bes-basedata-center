@@ -9,11 +9,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 题目类别VO
+ * 题目类型VO
  * @author
  */
-public class CategoryVO implements Serializable {
-
+public class SubjectType implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
     /**
      * 题目类别id
@@ -85,7 +84,7 @@ public class CategoryVO implements Serializable {
 
     @Override
     public String toString() {
-        return "CategoryVO{" +
+        return "SubjectType{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", remark='" + remark + '\'' +
@@ -93,5 +92,4 @@ public class CategoryVO implements Serializable {
                 ", status=" + status +
                 '}';
     }
-
 }

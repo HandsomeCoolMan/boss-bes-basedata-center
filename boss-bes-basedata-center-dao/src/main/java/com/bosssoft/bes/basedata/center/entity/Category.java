@@ -2,6 +2,7 @@ package com.bosssoft.bes.basedata.center.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import common.CommonField;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -15,12 +16,6 @@ import java.io.Serializable;
  */
 @Table(name="t_category")
 public class Category extends CommonField implements Serializable{
-    /**
-     * 题目类别ID
-     */
-    @Id
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long categoryId;
 
     /**
      * 题目类别
@@ -42,14 +37,6 @@ public class Category extends CommonField implements Serializable{
 
 
     private static final long serialVersionUID = 1L;
-
-    public Long getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
-    }
 
     public String getName() {
         return name;
@@ -78,10 +65,10 @@ public class Category extends CommonField implements Serializable{
     @Override
     public String toString() {
         return "Category{" +
-                "categoryId=" + categoryId +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", parentId=" + parentId +
                 ", status=" + status +
+                ", id=" + id +
                 ", orgId=" + orgId +
                 ", companyId=" + companyId +
                 ", createdBy=" + createdBy +

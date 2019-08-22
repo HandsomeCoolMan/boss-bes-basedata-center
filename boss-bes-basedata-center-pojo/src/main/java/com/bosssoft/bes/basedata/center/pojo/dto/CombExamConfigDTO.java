@@ -1,4 +1,4 @@
-package com.bosssoft.bes.basedata.center.pojo.vo;
+package com.bosssoft.bes.basedata.center.pojo.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
@@ -9,28 +9,34 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 题目类别VO
- * @author
+ * 组卷配置DTO
+ * @author pan
  */
-public class CategoryVO implements Serializable {
-
+public class CombExamConfigDTO implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
     /**
-     * 题目类别id
+     * 组卷配置id
      */
     @Id
     @JsonSerialize(using = ToStringSerializer.class)
     private Long id;
 
     /**
-     * 题目类别
+     * 组卷配置名
      */
     private String name;
 
     /**
-     * 备注
+     * 试卷难度
      */
-    private String remark;
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long difficulty;
+
+    /**
+     * 更新人
+     */
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long updatedBy;
 
     /**
      * 更新时间
@@ -42,6 +48,11 @@ public class CategoryVO implements Serializable {
      */
     @Max(2)
     private Integer status;
+
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long companyId;
+
+    private String remark;
 
     public Long getId() {
         return id;
@@ -59,12 +70,20 @@ public class CategoryVO implements Serializable {
         this.name = name;
     }
 
-    public String getRemark() {
-        return remark;
+    public Long getDifficulty() {
+        return difficulty;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setDifficulty(Long difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public Long getUpdatedBy() {
+        return updatedBy;
+    }
+
+    public void setUpdatedBy(Long updatedBy) {
+        this.updatedBy = updatedBy;
     }
 
     public Date getUpdatedTime() {
@@ -83,15 +102,33 @@ public class CategoryVO implements Serializable {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "CategoryVO{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", remark='" + remark + '\'' +
-                ", updatedTime=" + updatedTime +
-                ", status=" + status +
-                '}';
+    public Long getCompanyId() {
+        return companyId;
     }
 
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    @Override
+    public String toString() {
+        return "CombExamConfig{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", difficulty=" + difficulty +
+                ", updatedBy=" + updatedBy +
+                ", updatedTime=" + updatedTime +
+                ", status=" + status +
+                ", companyId=" + companyId +
+                ", remark='" + remark + '\'' +
+                '}';
+    }
 }

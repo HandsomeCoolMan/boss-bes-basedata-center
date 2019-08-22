@@ -3,6 +3,7 @@ package com.bosssoft.bes.basedata.center.entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import common.CommonField;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -20,12 +21,6 @@ import java.util.Date;
 public class Dictionary extends CommonField implements Serializable {
 
     private static final long serialVersionUID = -9016613013240438499L;
-    /**
-     * 字典id
-     */
-    @Id
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long dictionaryId;
 
     /**
      * 字典名
@@ -54,16 +49,6 @@ public class Dictionary extends CommonField implements Serializable {
      */
     @Max(2)
     private Byte status;
-
-
-
-    public Long getDictionaryId() {
-        return dictionaryId;
-    }
-
-    public void setDictionaryId(Long dictionaryId) {
-        this.dictionaryId = dictionaryId;
-    }
 
     public String getName() {
         return name;
@@ -108,12 +93,12 @@ public class Dictionary extends CommonField implements Serializable {
     @Override
     public String toString() {
         return "Dictionary{" +
-                "dictionaryId=" + dictionaryId +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", category='" + category + '\'' +
                 ", value='" + value + '\'' +
                 ", remark='" + remark + '\'' +
                 ", status=" + status +
+                ", id=" + id +
                 ", orgId=" + orgId +
                 ", companyId=" + companyId +
                 ", createdBy=" + createdBy +

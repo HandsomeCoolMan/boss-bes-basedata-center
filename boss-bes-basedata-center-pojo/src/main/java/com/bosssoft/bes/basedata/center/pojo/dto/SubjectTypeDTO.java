@@ -1,4 +1,4 @@
-package com.bosssoft.bes.basedata.center.pojo.vo;
+package com.bosssoft.bes.basedata.center.pojo.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
@@ -9,28 +9,34 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 题目类别VO
- * @author
+ * 题目类型DTO
+ * @author pan
  */
-public class CategoryVO implements Serializable {
-
+public class SubjectTypeDTO implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
     /**
-     * 题目类别id
+     * 题目id
      */
     @Id
     @JsonSerialize(using = ToStringSerializer.class)
     private Long id;
 
     /**
-     * 题目类别
+     * 题目
      */
     private String name;
 
     /**
-     * 备注
+     * 题目类型id
      */
-    private String remark;
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long subjectTypeId;
+
+    /**
+     * 题目类别id
+     */
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long categoryId;
 
     /**
      * 更新时间
@@ -59,12 +65,20 @@ public class CategoryVO implements Serializable {
         this.name = name;
     }
 
-    public String getRemark() {
-        return remark;
+    public Long getSubjectTypeId() {
+        return subjectTypeId;
     }
 
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setSubjectTypeId(Long subjectTypeId) {
+        this.subjectTypeId = subjectTypeId;
+    }
+
+    public Long getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
     }
 
     public Date getUpdatedTime() {
@@ -85,13 +99,13 @@ public class CategoryVO implements Serializable {
 
     @Override
     public String toString() {
-        return "CategoryVO{" +
+        return "SubjectVO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", remark='" + remark + '\'' +
+                ", subjectTypeId=" + subjectTypeId +
+                ", categoryId=" + categoryId +
                 ", updatedTime=" + updatedTime +
                 ", status=" + status +
                 '}';
     }
-
 }

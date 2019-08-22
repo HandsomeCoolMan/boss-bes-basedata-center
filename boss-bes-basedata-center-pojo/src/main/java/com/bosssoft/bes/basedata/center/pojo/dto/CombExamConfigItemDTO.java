@@ -1,63 +1,65 @@
-package com.bosssoft.bes.basedata.center.entity;
+package com.bosssoft.bes.basedata.center.pojo.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import common.CommonField;
 
 import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
- * 组卷配置明细实体
- * t_comb_exam_config_item表
- * @author
+ * 组卷配置明细DTO
+ * @author pan
  */
-@Table(name="t_comb_exam_config_item")
-public class CombExamConfigItem extends CommonField implements Serializable {
+public class CombExamConfigItemDTO implements Serializable {
+    private static final long serialVersionUID = 6193674149029494679L;
+    /**
+     * 组卷配置明细id
+     */
+    @Id
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long id;
 
     /**
-     * 题型ID
+     * 题目类型id
      */
-    @NotNull(message = "题目类别不能为空！")
     @JsonSerialize(using = ToStringSerializer.class)
     private Long subjectTypeId;
 
     /**
-     * 组卷配置ID
+     * 组卷配置id
      */
-    @NotNull(message = "题目类别不能为空！")
     @JsonSerialize(using = ToStringSerializer.class)
     private Long combExamId;
 
     /**
-     * 题目类别ID
+     * 题目类别id
      */
-    @NotNull(message = "题目类别不能为空！")
     @JsonSerialize(using = ToStringSerializer.class)
     private Long categoryId;
 
     /**
      * 题目数量
      */
-    @NotNull(message = "题目类别不能为空！")
     private Integer num;
 
     /**
      * 题目难度
      */
-    @NotNull(message = "题目类别不能为空！")
     @JsonSerialize(using = ToStringSerializer.class)
-    private Long difficult;
+    private Long difficulty;
 
     /**
-     * 题目分值
+     * 题目分数
      */
-    @NotNull(message = "题目类别不能为空！")
-    private double score;
+    private Integer score;
 
-    private static final long serialVersionUID = 1L;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Long getSubjectTypeId() {
         return subjectTypeId;
@@ -91,39 +93,32 @@ public class CombExamConfigItem extends CommonField implements Serializable {
         this.num = num;
     }
 
-    public Long getDifficult() {
-        return difficult;
+    public Long getDifficulty() {
+        return difficulty;
     }
 
-    public void setDifficult(Long difficult) {
-        this.difficult = difficult;
+    public void setDifficulty(Long difficulty) {
+        this.difficulty = difficulty;
     }
 
-    public double getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(double score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 
     @Override
     public String toString() {
         return "CombExamConfigItem{" +
-                "subjectTypeId=" + subjectTypeId +
+                "id=" + id +
+                ", subjectTypeId=" + subjectTypeId +
                 ", combExamId=" + combExamId +
                 ", categoryId=" + categoryId +
                 ", num=" + num +
-                ", difficult=" + difficult +
+                ", difficulty=" + difficulty +
                 ", score=" + score +
-                ", id=" + id +
-                ", orgId=" + orgId +
-                ", companyId=" + companyId +
-                ", createdBy=" + createdBy +
-                ", createdTime=" + createdTime +
-                ", updatedBy=" + updatedBy +
-                ", updatedTime=" + updatedTime +
-                ", version=" + version +
                 '}';
     }
 }

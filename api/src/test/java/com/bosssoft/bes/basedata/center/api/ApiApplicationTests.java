@@ -18,7 +18,6 @@ public class ApiApplicationTests {
     @Test
     public void addDictionary(){
         Dictionary dictionary = new Dictionary();
-        dictionary.setDictionaryId(2L);
         System.out.println(dictionary);
 
 

@@ -4,12 +4,12 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 import javax.persistence.Id;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 /**
- * dictionaryDTO
- *
+ * 数据字典VO
  * @Author: 谢良希
  * @Date: 2019/8/13
  * @Version: 1.0
@@ -23,21 +23,18 @@ public class DictionaryVO implements Serializable {
      */
     @Id
     @JsonSerialize(using = ToStringSerializer.class)
-    private Long dictionaryId;
+    private Long id;
     /**
      * 字典名
      */
-    @NotNull(message = "字典名不能为空！")
     private String name;
     /**
      * 字典类型
      */
-    @NotNull(message = "字典类型不能为空！")
     private String category;
     /**
      * 字典值
      */
-    @NotNull(message = "字典值不能为空！")
     private String value;
     /**
      * 更新时间
@@ -50,6 +47,7 @@ public class DictionaryVO implements Serializable {
     /**
      * 状态
      */
+    @Max(2)
     private Integer status;
 
 
@@ -101,18 +99,18 @@ public class DictionaryVO implements Serializable {
         this.status = status;
     }
 
-    public Long getDictionaryId() {
-        return dictionaryId;
+    public Long getId() {
+        return id;
     }
 
-    public void setDictionaryId(Long dictionaryId) {
-        this.dictionaryId = dictionaryId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override
     public String toString() {
         return "DictionaryVO{" +
-                "dictionaryId=" + dictionaryId +
+                "dictionaryId=" + id +
                 ", name='" + name + '\'' +
                 ", category='" + category + '\'' +
                 ", value='" + value + '\'' +
