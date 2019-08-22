@@ -25,7 +25,7 @@ public class Dictionary extends CommonField implements Serializable {
      */
     @Id
     @JsonSerialize(using = ToStringSerializer.class)
-    private Long dictionaryId;
+    private Long id;
 
     /**
      * 字典名
@@ -57,13 +57,6 @@ public class Dictionary extends CommonField implements Serializable {
 
 
 
-    public Long getDictionaryId() {
-        return dictionaryId;
-    }
-
-    public void setDictionaryId(Long dictionaryId) {
-        this.dictionaryId = dictionaryId;
-    }
 
     public String getName() {
         return name;
@@ -108,7 +101,6 @@ public class Dictionary extends CommonField implements Serializable {
     @Override
     public String toString() {
         return "Dictionary{" +
-                "dictionaryId=" + dictionaryId +
                 ", name='" + name + '\'' +
                 ", category='" + category + '\'' +
                 ", value='" + value + '\'' +

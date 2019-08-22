@@ -50,7 +50,7 @@ public class DictionaryServiceImpl implements DictionaryService<Dictionary>  {
     }
 
     @Override
-    public List<Dictionary> findByConditon(Dictionary dictionary) {
+    public List<Dictionary> query(Dictionary dictionary) {
         try {
             return dictionaryMapper.select(dictionary);
         } catch (Exception e) {

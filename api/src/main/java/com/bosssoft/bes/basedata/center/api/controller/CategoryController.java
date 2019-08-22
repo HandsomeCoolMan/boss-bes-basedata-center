@@ -5,8 +5,9 @@ import protocol.CommonResponse;
 
 
 public class CategoryController extends BaseController {
+
     @Override
-    public CommonResponse add(CommonRequest object) {
+    public CommonResponse save(CommonRequest commonRequest) {
         return null;
     }
 
@@ -21,7 +22,8 @@ public class CategoryController extends BaseController {
     }
 
     @Override
-    public CommonResponse findByCondition(CommonRequest object) {
+    public CommonResponse query(CommonRequest object) {
         return null;
     }
+
 }

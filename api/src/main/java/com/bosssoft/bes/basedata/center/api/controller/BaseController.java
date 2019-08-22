@@ -1,35 +1,38 @@
 package com.bosssoft.bes.basedata.center.api.controller;
 
-import org.springframework.web.bind.annotation.RestController;
 import protocol.CommonRequest;
 import protocol.CommonResponse;
 
-/**
- * @author
- */
-@RestController
 public abstract class BaseController {
     /**
-     * @param object
+     * 基础添加请求
+     *
+     * @param commonRequest
      * @return
      */
-    public abstract CommonResponse add(CommonRequest object);
+    public abstract CommonResponse save(CommonRequest commonRequest);
 
     /**
-     * @param object
+     * 基础删除请求
+     *
+     * @param commonRequest
      * @return
      */
-    public abstract CommonResponse delete(CommonRequest object);
+    public abstract CommonResponse delete(CommonRequest commonRequest);
 
     /**
-     * @param object
+     * 基础更新请求
+     *
+     * @param commonRequest
      * @return
      */
-    public abstract CommonResponse update(CommonRequest object);
+    public abstract CommonResponse update(CommonRequest commonRequest);
 
     /**
-     * @param object
+     * 基础查找请求
+     *
+     * @param commonRequest
      * @return
      */
-    public abstract CommonResponse findByCondition(CommonRequest object);
+    public abstract CommonResponse query(CommonRequest commonRequest);
 }

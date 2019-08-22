@@ -6,6 +6,8 @@ import com.bosssoft.bes.basedata.center.pojo.vo.DictionaryVO;
 import com.bosssoft.bes.basedata.center.service.DictionaryService;
 import com.bosssoft.hr.train.bossbescommonlogging.annotation.Log;
 
+import exception.BusinessException;
+import exception.EnumException;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +28,7 @@ import java.util.List;
  */
 @CrossOrigin("*")
 @RestController
-@RequestMapping(value = "/dictionary")
+@RequestMapping(value = "/boss/bes/basedata/dictionary")
 public class DictionaryController extends BaseController {
 
     @Autowired
@@ -49,7 +51,6 @@ public class DictionaryController extends BaseController {
      * @return: protocol.CommonResponse
      */
     @Log
-    @Override
     @RequestMapping(value = "add",method = RequestMethod.POST)
     public CommonResponse add(@RequestBody  CommonRequest commonRequest) {
         
@@ -65,9 +66,10 @@ public class DictionaryController extends BaseController {
         if(result.isHasErrors()){
             //这里面存的就是错误信息
             result.getErrMsg();
-            return CommonResponse.create("1","1","1",false,result.getErrMsg());
+
+            throw new BusinessException(EnumException.SYSTEM_PARAMETER_VALUE_INVALIDE);
         }
-        dictionaryService.add(dictionary);
+        dictionaryService.save(dictionary);
         return CommonResponse.create("1","2","3",false,"添加成功！");
     }
 
@@ -78,6 +80,11 @@ public class DictionaryController extends BaseController {
         return "hello";
     }
 
+
+    @Override
+    public CommonResponse save(CommonRequest commonRequest) {
+        return null;
+    }
 
     /**
      * 数据字典删除
@@ -113,19 +120,24 @@ public class DictionaryController extends BaseController {
         return CommonResponse.create("1","1","1",false,message);
     }
 
+    @Override
+    public CommonResponse query(CommonRequest object) {
+        return null;
+    }
+
     /**
      * 数据字典查找
      *
      * @param commonRequest
      * @return: protocol.CommonResponse
      */
-    @Override
-    @RequestMapping(value = "find",method = RequestMethod.POST)
+    @RequestMapping(value = "getDictionaryInfo",method = RequestMethod.POST)
     public CommonResponse findByCondition(@RequestBody CommonRequest commonRequest) {
         Dictionary dictionary = JSON.parseObject( JSON.toJSONString(commonRequest.getBody().getData()) , Dictionary.class);
-        List<Dictionary> dictionaryList = dictionaryService.findByConditon(dictionary);
+        List<Dictionary> dictionaryList = dictionaryService.query(dictionary);
         System.out.println(dictionaryList);
-        return CommonResponse.create("1","1","1",false,dictionaryList);
+        System.out.println("数据源自handsome！");
+        return CommonResponse.create("1","200","1",false,dictionaryList);
     }
 
 }
