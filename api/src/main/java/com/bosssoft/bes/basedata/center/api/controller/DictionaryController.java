@@ -1,6 +1,7 @@
 package com.bosssoft.bes.basedata.center.api.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.bosssoft.bes.basedata.center.entity.Dictionary;
 import com.bosssoft.bes.basedata.center.pojo.dto.DictionaryDTO;
 import com.bosssoft.bes.basedata.center.pojo.vo.DictionaryVO;
 import com.bosssoft.bes.basedata.center.service.DictionaryService;
@@ -28,7 +29,7 @@ import java.util.List;
 public class DictionaryController extends AbstractBaseController {
 
     @Autowired
-    private DictionaryService<DictionaryDTO, DictionaryDTO> dictionaryService;
+    private DictionaryService<DictionaryDTO> dictionaryService;
 
     /**参数校验工具类*/
     @Autowired
@@ -55,13 +56,15 @@ public class DictionaryController extends AbstractBaseController {
     @Log
     @Override
     @RequestMapping(value = "save",method = RequestMethod.POST)
-
     public CommonResponse save(@RequestBody  CommonRequest commonRequest) {
 
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
         converter.copyProperties(dictionaryVO,dictionaryDTO);
-        dictionaryService.save(dictionaryDTO,token);
-        return CommonResponse.create("1","0","3",false,"添加成功！");
+        //先用一个临时token测试
+        dictionaryDTO.setToken(token);
+        dictionaryService.save(dictionaryDTO);
+        message="添加成功！";
+        return CommonResponse.create("1","200","3",false,message);
     }
 
     /**
@@ -77,7 +80,8 @@ public class DictionaryController extends AbstractBaseController {
 
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
         dictionaryService.deleteById(dictionaryVO.getId());
-        return CommonResponse.create("1","0","1",false,"删除成功！");
+        message ="删除成功！";
+        return CommonResponse.create("1","200","1",false,message);
     }
 
     /**
@@ -93,12 +97,12 @@ public class DictionaryController extends AbstractBaseController {
 
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
         converter.copyProperties(dictionaryVO,dictionaryDTO);
-        if(dictionaryService.update(dictionaryDTO, token)){
+        if(dictionaryService.update(dictionaryDTO)){
             message = "修改成功！";
-            return CommonResponse.create("1","0","1",false,message);
+            return CommonResponse.create("1","200","1",false,message);
         }else {
             message = "修改错误！";
-            return CommonResponse.create("1","1","1",false,message);
+            return CommonResponse.create("1","1000","1",false,message);
         }
     }
 
@@ -114,10 +118,13 @@ public class DictionaryController extends AbstractBaseController {
     public CommonResponse query(@RequestBody CommonRequest commonRequest) {
         System.out.println(commonRequest.toString());
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
+        System.out.println("dictionaryVO:"+dictionaryVO.toString());
+
         converter.copyProperties(dictionaryVO,dictionaryDTO);
-        List<DictionaryVO> list = new ArrayList<>();
-        converter.copyProperties(dictionaryService.query(dictionaryDTO),list);
-        return CommonResponse.create("1","1","1",false,list);
+        List<Dictionary> dictionaryList = new ArrayList<Dictionary>();
+        dictionaryList = dictionaryService.queryAll(dictionaryDTO);
+
+        return CommonResponse.create("1","200","1",false,dictionaryList);
     }
 
 }

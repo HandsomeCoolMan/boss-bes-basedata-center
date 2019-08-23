@@ -48,7 +48,7 @@ public class DictionaryVO implements Serializable {
      * 状态
      */
     @Max(2)
-    private Integer status;
+    private Byte status;
 
 
     public String getName() {
@@ -91,11 +91,11 @@ public class DictionaryVO implements Serializable {
         this.remark = remark;
     }
 
-    public Integer getStatus() {
+    public Byte getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(Byte status) {
         this.status = status;
     }
 

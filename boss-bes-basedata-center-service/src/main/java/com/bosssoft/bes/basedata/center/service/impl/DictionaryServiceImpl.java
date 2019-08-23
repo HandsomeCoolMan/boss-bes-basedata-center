@@ -20,7 +20,7 @@ import java.util.List;
  * @author
  */
 @Service
-public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,DictionaryDTO>  {
+public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO>  {
 
     @Autowired
     private DictionaryMapper dictionaryMapper;
@@ -31,16 +31,17 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,D
 
     @Autowired
     Converter converter;
+
     /**
-     * @Transactional 表示事务开启
+     * 数据字典添加
      *
      * @param dictionaryDTO
-     * @return: int
+     * @return: boolean
      */
     @Override
     @Transactional(rollbackFor = SQLException.class)
     @FullCommonField(dataCenterId = 1, machineId = 2, operation = EnumOperation.INSERT)
-    public boolean save(DictionaryDTO dictionaryDTO, String token) {
+    public boolean save(DictionaryDTO dictionaryDTO) {
         converter.copyProperties(dictionaryDTO, dictionary);
         try{
             dictionaryMapper.insert(dictionary);
@@ -50,6 +51,12 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,D
         }
     }
 
+    /**
+     * 数据字典删除
+     *
+     * @param id
+     * @return: boolean
+     */
     @Override
     @Transactional(rollbackFor = SQLException.class)
     public boolean deleteById(Long id) {
@@ -61,7 +68,13 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,D
         }
     }
 
-    @Override
+    /**
+     * 数据字典更新
+     *
+     * @param dictionaryDTO
+     * @param token
+     * @return: boolean
+     */
     @Transactional(rollbackFor = SQLException.class)
     @FullCommonField(dataCenterId = 1, machineId = 2, operation = EnumOperation.UPDATE)
     public boolean update(DictionaryDTO dictionaryDTO, String token) {
@@ -74,18 +87,23 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,D
         }
     }
 
+    /**
+     * 数据字典查询
+     *
+     * @param dictionaryDTO
+     * @return: java.util.List<com.bosssoft.bes.basedata.center.pojo.dto.DictionaryDTO>
+     */
     @Override
     @Transactional(rollbackFor = SQLException.class)
-    public List<DictionaryDTO> query(DictionaryDTO dictionaryDTO) {
-        List<DictionaryDTO> dictionaryDTOList = new ArrayList<>();
-        converter.copyProperties(dictionaryDTO, dictionary);
+    public List<Dictionary> queryAll(DictionaryDTO dictionaryDTO) {
         try {
-            converter.copyProperties(dictionaryMapper.select(dictionary),dictionaryDTOList);
-            return dictionaryDTOList;
+            converter.copyProperties(dictionaryDTO,dictionary);
+            return dictionaryMapper.select(dictionary);
         } catch (Exception e) {
             throw  new BusinessException(10003,e.getMessage(),e);
         }
     }
+
 
     @Override
     @Transactional(rollbackFor = SQLException.class)
@@ -97,6 +115,23 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,D
             throw  new BusinessException(10003,e.getMessage(),e);
         }
     }
+
+    @Override
+    public List query(Object o) {
+        try {
+            converter.copyProperties(o,dictionary);
+            return dictionaryMapper.select(dictionary);
+        } catch (Exception e) {
+            throw  new BusinessException(10003,e.getMessage(),e);
+        }
+    }
+
+    @Override
+    public boolean update(DictionaryDTO dictionaryDTO) {
+        return false;
+    }
+
+
 
 
 }
