@@ -1,5 +1,6 @@
 package com.bosssoft.bes.basedata.center.service.impl;
 
+import annotations.EnumOperation;
 import annotations.FullCommonField;
 import com.bosssoft.bes.basedata.center.dao.DictionaryMapper;
 import com.bosssoft.bes.basedata.center.entity.Dictionary;
@@ -28,6 +29,8 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,D
 
     private DictionaryDTO dictionaryDTO = new DictionaryDTO();
 
+    @Autowired
+    Converter converter;
     /**
      * @Transactional 表示事务开启
      *
@@ -36,9 +39,9 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,D
      */
     @Override
     @Transactional(rollbackFor = SQLException.class)
-    @FullCommonField(dataCenterId = 1, machineId = 2)
+    @FullCommonField(dataCenterId = 1, machineId = 2, operation = EnumOperation.INSERT)
     public boolean save(DictionaryDTO dictionaryDTO, String token) {
-        Converter.copyProperties(dictionaryDTO, dictionary);
+        converter.copyProperties(dictionaryDTO, dictionary);
         try{
             dictionaryMapper.insert(dictionary);
             return true;
@@ -60,11 +63,11 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,D
 
     @Override
     @Transactional(rollbackFor = SQLException.class)
-    @FullCommonField(dataCenterId = 1, machineId = 2)
+    @FullCommonField(dataCenterId = 1, machineId = 2, operation = EnumOperation.UPDATE)
     public boolean update(DictionaryDTO dictionaryDTO, String token) {
-        Converter.copyProperties(dictionaryDTO, dictionary);
+        converter.copyProperties(dictionaryDTO, dictionary);
         try {
-            dictionaryMapper.updateByPrimaryKeySelective(dictionary);
+            System.out.println(dictionaryMapper.updateByPrimaryKeySelective(dictionary));
             return true;
         } catch (Exception e) {
             throw  new BusinessException(10003,e.getMessage(),e);
@@ -74,10 +77,10 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,D
     @Override
     @Transactional(rollbackFor = SQLException.class)
     public List<DictionaryDTO> query(DictionaryDTO dictionaryDTO) {
-        List<DictionaryDTO> dictionaryDTOList = new ArrayList<DictionaryDTO>();
-        Converter.copyProperties(dictionaryDTO, dictionary);
+        List<DictionaryDTO> dictionaryDTOList = new ArrayList<>();
+        converter.copyProperties(dictionaryDTO, dictionary);
         try {
-            Converter.copyProperties(dictionaryMapper.select(dictionary),dictionaryDTOList);
+            converter.copyProperties(dictionaryMapper.select(dictionary),dictionaryDTOList);
             return dictionaryDTOList;
         } catch (Exception e) {
             throw  new BusinessException(10003,e.getMessage(),e);
@@ -88,7 +91,7 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO,D
     @Transactional(rollbackFor = SQLException.class)
     public DictionaryDTO queryById(Long id){
         try {
-            Converter.copyProperties(dictionaryMapper.selectByPrimaryKey(id),dictionaryDTO);
+            converter.copyProperties(dictionaryMapper.selectByPrimaryKey(id),dictionaryDTO);
             return dictionaryDTO;
         } catch (Exception e) {
             throw  new BusinessException(10003,e.getMessage(),e);
