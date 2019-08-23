@@ -3,9 +3,6 @@ package com.bosssoft.bes.basedata.center.dao;
 import com.bosssoft.bes.basedata.center.entity.Dictionary;
 import tk.mybatis.mapper.common.Mapper;
 
-
-import java.util.List;
-
 /**
  * @author
  */

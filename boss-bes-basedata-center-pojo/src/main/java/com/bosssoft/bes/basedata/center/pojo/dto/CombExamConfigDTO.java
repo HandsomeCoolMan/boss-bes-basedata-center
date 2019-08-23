@@ -2,6 +2,7 @@ package com.bosssoft.bes.basedata.center.pojo.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import common.CommonField;
 
 import javax.persistence.Id;
 import javax.validation.constraints.Max;
@@ -12,14 +13,8 @@ import java.util.Date;
  * 组卷配置DTO
  * @author pan
  */
-public class CombExamConfigDTO implements Serializable {
+public class CombExamConfigDTO extends CommonField implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
-    /**
-     * 组卷配置id
-     */
-    @Id
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long id;
 
     /**
      * 组卷配置名
@@ -33,17 +28,6 @@ public class CombExamConfigDTO implements Serializable {
     private Long difficulty;
 
     /**
-     * 更新人
-     */
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long updatedBy;
-
-    /**
-     * 更新时间
-     */
-    private Date updatedTime;
-
-    /**
      * 状态位
      */
     @Max(2)
@@ -53,14 +37,6 @@ public class CombExamConfigDTO implements Serializable {
     private Long companyId;
 
     private String remark;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -78,36 +54,12 @@ public class CombExamConfigDTO implements Serializable {
         this.difficulty = difficulty;
     }
 
-    public Long getUpdatedBy() {
-        return updatedBy;
-    }
-
-    public void setUpdatedBy(Long updatedBy) {
-        this.updatedBy = updatedBy;
-    }
-
-    public Date getUpdatedTime() {
-        return updatedTime;
-    }
-
-    public void setUpdatedTime(Date updatedTime) {
-        this.updatedTime = updatedTime;
-    }
-
     public Integer getStatus() {
         return status;
     }
 
     public void setStatus(Integer status) {
         this.status = status;
-    }
-
-    public Long getCompanyId() {
-        return companyId;
-    }
-
-    public void setCompanyId(Long companyId) {
-        this.companyId = companyId;
     }
 
     public String getRemark() {
@@ -120,15 +72,20 @@ public class CombExamConfigDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "CombExamConfig{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "CombExamConfigDTO{" +
+                "name='" + name + '\'' +
                 ", difficulty=" + difficulty +
-                ", updatedBy=" + updatedBy +
-                ", updatedTime=" + updatedTime +
                 ", status=" + status +
                 ", companyId=" + companyId +
                 ", remark='" + remark + '\'' +
+                ", id=" + id +
+                ", orgId=" + orgId +
+                ", companyId=" + companyId +
+                ", createdBy=" + createdBy +
+                ", createdTime=" + createdTime +
+                ", updatedBy=" + updatedBy +
+                ", updatedTime=" + updatedTime +
+                ", version=" + version +
                 '}';
     }
 }
