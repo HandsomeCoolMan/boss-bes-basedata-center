@@ -2,9 +2,11 @@ package com.bosssoft.bes.basedata.center.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import common.CommonField;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
@@ -14,56 +16,48 @@ import java.io.Serializable;
  */
 @Table(name="t_comb_exam_config_item")
 public class CombExamConfigItem extends CommonField implements Serializable {
-    /**
-     * 组卷配置明细项ID
-     */
-    @Id
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long combExamConfigItemId;
 
     /**
      * 题型ID
      */
+    @NotNull(message = "题目类别不能为空！")
     @JsonSerialize(using = ToStringSerializer.class)
     private Long subjectTypeId;
 
     /**
      * 组卷配置ID
      */
+    @NotNull(message = "题目类别不能为空！")
     @JsonSerialize(using = ToStringSerializer.class)
     private Long combExamId;
 
     /**
      * 题目类别ID
      */
+    @NotNull(message = "题目类别不能为空！")
     @JsonSerialize(using = ToStringSerializer.class)
     private Long categoryId;
 
     /**
      * 题目数量
      */
+    @NotNull(message = "题目类别不能为空！")
     private Integer num;
 
     /**
      * 题目难度
      */
+    @NotNull(message = "题目类别不能为空！")
     @JsonSerialize(using = ToStringSerializer.class)
     private Long difficult;
 
     /**
      * 题目分值
      */
+    @NotNull(message = "题目类别不能为空！")
     private double score;
 
     private static final long serialVersionUID = 1L;
-
-    public Long getCombExamConfigItemId() {
-        return combExamConfigItemId;
-    }
-
-    public void setCombExamConfigItemId(Long combExamConfigItemId) {
-        this.combExamConfigItemId = combExamConfigItemId;
-    }
 
     public Long getSubjectTypeId() {
         return subjectTypeId;
@@ -116,13 +110,13 @@ public class CombExamConfigItem extends CommonField implements Serializable {
     @Override
     public String toString() {
         return "CombExamConfigItem{" +
-                "combExamConfigItemId=" + combExamConfigItemId +
-                ", subjectTypeId=" + subjectTypeId +
+                "subjectTypeId=" + subjectTypeId +
                 ", combExamId=" + combExamId +
                 ", categoryId=" + categoryId +
                 ", num=" + num +
                 ", difficult=" + difficult +
                 ", score=" + score +
+                ", id=" + id +
                 ", orgId=" + orgId +
                 ", companyId=" + companyId +
                 ", createdBy=" + createdBy +

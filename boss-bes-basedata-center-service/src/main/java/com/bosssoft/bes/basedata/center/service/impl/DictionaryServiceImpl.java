@@ -1,5 +1,6 @@
 package com.bosssoft.bes.basedata.center.service.impl;
 
+import annotations.FullCommonField;
 import com.bosssoft.bes.basedata.center.dao.DictionaryMapper;
 import com.bosssoft.bes.basedata.center.entity.Dictionary;
 import com.bosssoft.bes.basedata.center.service.DictionaryService;
@@ -10,6 +11,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * @author
+ */
 @Service
 public class DictionaryServiceImpl implements DictionaryService<Dictionary>  {
 
@@ -24,8 +28,14 @@ public class DictionaryServiceImpl implements DictionaryService<Dictionary>  {
      */
     @Override
     @Transactional
+    @FullCommonField(dataCenterId = 1, machineId = 2)
     public int add(Dictionary object) {
-        return dictionaryMapper.insert(object);
+        try{
+            return dictionaryMapper.insert(object);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return -1;
     }
 
     @Override

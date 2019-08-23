@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper .//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bosssoft.bes.basedata.center.entity.DictionaryMapper">
   <resultMap id="BaseResultMap" type="com.bosssoft.bes.basedata.center.entity.Dictionary">
-    <id column="dictionary_id" jdbcType="BIGINT" property="dictionaryId" />
+    <id column="id" jdbcType="BIGINT" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="category" jdbcType="VARCHAR" property="category" />
     <result column="value" jdbcType="VARCHAR" property="value" />
@@ -74,7 +74,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    dictionary_id, `name`, category, `value`, remark, `status`, org_id, created_by, created_time, 
+    id, `name`, category, `value`, remark, `status`, org_id, created_by, created_time,
     updated_by, updated_time, version
   </sql>
   <select id="selectByExample" parameterType="com.bosssoft.bes.basedata.center.entity.DictionaryExample" resultMap="BaseResultMap">
@@ -95,11 +95,11 @@
     select 
     <include refid="Base_Column_List" />
     from t_dictionary
-    where dictionary_id = #{dictionaryId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from t_dictionary
-    where dictionary_id = #{dictionaryId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="com.bosssoft.bes.basedata.center.entity.DictionaryExample">
     delete from t_dictionary
@@ -117,7 +117,7 @@
       #{createdBy,jdbcType=BIGINT}, #{createdTime,jdbcType=TIMESTAMP}, #{updatedBy,jdbcType=BIGINT}, 
       #{updatedTime,jdbcType=TIMESTAMP}, #{version,jdbcType=BIGINT})
   </insert>
-  <insert id="insertSelective" keyColumn="dictionary_id" keyProperty="dictionaryId" parameterType="com.bosssoft.bes.basedata.center.entity.Dictionary" useGeneratedKeys="true">
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.bosssoft.bes.basedata.center.entity.Dictionary" useGeneratedKeys="true">
     insert into t_dictionary
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="name != null">
@@ -199,8 +199,8 @@
   <update id="updateByExampleSelective" parameterType="map">
     update t_dictionary
     <set>
-      <if test="record.dictionaryId != null">
-        dictionary_id = #{record.dictionaryId,jdbcType=BIGINT},
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=BIGINT},
       </if>
       <if test="record.name != null">
         `name` = #{record.name,jdbcType=VARCHAR},
@@ -242,7 +242,7 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update t_dictionary
-    set dictionary_id = #{record.dictionaryId,jdbcType=BIGINT},
+    set id = #{record.id,jdbcType=BIGINT},
       `name` = #{record.name,jdbcType=VARCHAR},
       category = #{record.category,jdbcType=VARCHAR},
       `value` = #{record.value,jdbcType=VARCHAR},

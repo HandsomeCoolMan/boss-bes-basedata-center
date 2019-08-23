@@ -2,9 +2,11 @@ package com.bosssoft.bes.basedata.center.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import common.CommonField;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -16,20 +18,15 @@ import java.util.Date;
 public class Subject extends CommonField implements Serializable {
 
     /**
-     * 题目id
-     */
-    @Id
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long subjectId;
-
-    /**
      * 题目类型id
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long subjectTypeId;
 
     /**
      * 题目类别id
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long categoryId;
 
     /**
@@ -40,11 +37,13 @@ public class Subject extends CommonField implements Serializable {
     /**
      * 难度
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long difficulty;
 
     /**
      * 状态位
      */
+    @Max(2)
     private Byte status;
 
     /**
@@ -63,14 +62,6 @@ public class Subject extends CommonField implements Serializable {
     private String field3;
 
     private static final long serialVersionUID = 1L;
-
-    public Long getSubjectId() {
-        return subjectId;
-    }
-
-    public void setSubjectId(Long subjectId) {
-        this.subjectId = subjectId;
-    }
 
     public Long getSubjectTypeId() {
         return subjectTypeId;
@@ -139,8 +130,7 @@ public class Subject extends CommonField implements Serializable {
     @Override
     public String toString() {
         return "Subject{" +
-                "subjectId=" + subjectId +
-                ", subjectTypeId=" + subjectTypeId +
+                "subjectTypeId=" + subjectTypeId +
                 ", categoryId=" + categoryId +
                 ", name='" + name + '\'' +
                 ", difficulty=" + difficulty +
@@ -148,6 +138,7 @@ public class Subject extends CommonField implements Serializable {
                 ", field1='" + field1 + '\'' +
                 ", field2='" + field2 + '\'' +
                 ", field3='" + field3 + '\'' +
+                ", id=" + id +
                 ", orgId=" + orgId +
                 ", companyId=" + companyId +
                 ", createdBy=" + createdBy +
@@ -157,5 +148,4 @@ public class Subject extends CommonField implements Serializable {
                 ", version=" + version +
                 '}';
     }
-
 }

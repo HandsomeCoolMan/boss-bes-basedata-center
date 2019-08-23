@@ -2,6 +2,7 @@ package com.bosssoft.bes.basedata.center.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import common.CommonField;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -19,12 +20,6 @@ import java.util.Date;
 public class CombExamConfig extends CommonField implements Serializable {
 
     private static final long serialVersionUID = 3187412730553408795L;
-    /**
-     * 组卷配置ID
-     */
-    @Id
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long combExamId;
 
     /**
      * 配置名
@@ -42,14 +37,6 @@ public class CombExamConfig extends CommonField implements Serializable {
      */
     @Max(2)
     private Byte status;
-
-    public Long getCombExamId() {
-        return combExamId;
-    }
-
-    public void setCombExamId(Long combExamId) {
-        this.combExamId = combExamId;
-    }
 
     public String getName() {
         return name;
@@ -78,10 +65,10 @@ public class CombExamConfig extends CommonField implements Serializable {
     @Override
     public String toString() {
         return "CombExamConfig{" +
-                "combExamId=" + combExamId +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", remark='" + remark + '\'' +
                 ", status=" + status +
+                ", id=" + id +
                 ", orgId=" + orgId +
                 ", companyId=" + companyId +
                 ", createdBy=" + createdBy +
