@@ -2,6 +2,7 @@ package com.bosssoft.bes.basedata.center.pojo.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import common.CommonField;
 
 import javax.persistence.Id;
 import javax.validation.constraints.Max;
@@ -12,14 +13,8 @@ import java.util.Date;
  * 题目类型DTO
  * @author pan
  */
-public class SubjectTypeDTO implements Serializable {
+public class SubjectTypeDTO extends CommonField implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
-    /**
-     * 题目id
-     */
-    @Id
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long id;
 
     /**
      * 题目
@@ -39,23 +34,10 @@ public class SubjectTypeDTO implements Serializable {
     private Long categoryId;
 
     /**
-     * 更新时间
-     */
-    private Date updatedTime;
-
-    /**
      * 状态位
      */
     @Max(2)
     private Integer status;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -81,14 +63,6 @@ public class SubjectTypeDTO implements Serializable {
         this.categoryId = categoryId;
     }
 
-    public Date getUpdatedTime() {
-        return updatedTime;
-    }
-
-    public void setUpdatedTime(Date updatedTime) {
-        this.updatedTime = updatedTime;
-    }
-
     public Integer getStatus() {
         return status;
     }
@@ -99,13 +73,19 @@ public class SubjectTypeDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "SubjectVO{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "SubjectTypeDTO{" +
+                "name='" + name + '\'' +
                 ", subjectTypeId=" + subjectTypeId +
                 ", categoryId=" + categoryId +
-                ", updatedTime=" + updatedTime +
                 ", status=" + status +
+                ", id=" + id +
+                ", orgId=" + orgId +
+                ", companyId=" + companyId +
+                ", createdBy=" + createdBy +
+                ", createdTime=" + createdTime +
+                ", updatedBy=" + updatedBy +
+                ", updatedTime=" + updatedTime +
+                ", version=" + version +
                 '}';
     }
 }

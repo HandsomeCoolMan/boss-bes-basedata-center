@@ -2,6 +2,7 @@ package com.bosssoft.bes.basedata.center.pojo.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import common.CommonField;
 
 import javax.persistence.Id;
 import javax.validation.constraints.Max;
@@ -12,14 +13,8 @@ import java.util.Date;
  * 题目DTO
  * @author pan
  */
-public class SubjectDTO implements Serializable {
+public class SubjectDTO extends CommonField implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
-    /**
-     * 题目类别id
-     */
-    @Id
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long id;
 
     /**
      * 题目类别
@@ -32,23 +27,10 @@ public class SubjectDTO implements Serializable {
     private String remark;
 
     /**
-     * 更新时间
-     */
-    private Date updatedTime;
-
-    /**
      * 状态位
      */
     @Max(2)
     private Integer status;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -66,14 +48,6 @@ public class SubjectDTO implements Serializable {
         this.remark = remark;
     }
 
-    public Date getUpdatedTime() {
-        return updatedTime;
-    }
-
-    public void setUpdatedTime(Date updatedTime) {
-        this.updatedTime = updatedTime;
-    }
-
     public Integer getStatus() {
         return status;
     }
@@ -84,12 +58,18 @@ public class SubjectDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "SubjectType{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "SubjectDTO{" +
+                "name='" + name + '\'' +
                 ", remark='" + remark + '\'' +
-                ", updatedTime=" + updatedTime +
                 ", status=" + status +
+                ", id=" + id +
+                ", orgId=" + orgId +
+                ", companyId=" + companyId +
+                ", createdBy=" + createdBy +
+                ", createdTime=" + createdTime +
+                ", updatedBy=" + updatedBy +
+                ", updatedTime=" + updatedTime +
+                ", version=" + version +
                 '}';
     }
 }

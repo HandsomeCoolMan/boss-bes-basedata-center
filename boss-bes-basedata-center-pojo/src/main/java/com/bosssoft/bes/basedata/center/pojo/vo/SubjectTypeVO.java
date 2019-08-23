@@ -12,7 +12,7 @@ import java.util.Date;
  * 题目类型VO
  * @author
  */
-public class SubjectType implements Serializable {
+public class SubjectTypeVO implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
     /**
      * 题目类别id

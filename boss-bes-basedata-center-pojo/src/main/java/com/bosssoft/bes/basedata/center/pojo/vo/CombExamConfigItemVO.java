@@ -10,7 +10,7 @@ import java.io.Serializable;
  * 组卷配置明细VO
  * @author
  */
-public class CombExamConfigItem implements Serializable {
+public class CombExamConfigItemVO implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
     /**
      * 组卷配置明细id

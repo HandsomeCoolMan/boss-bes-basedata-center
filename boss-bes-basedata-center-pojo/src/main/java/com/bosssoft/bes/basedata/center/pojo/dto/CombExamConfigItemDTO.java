@@ -2,6 +2,7 @@ package com.bosssoft.bes.basedata.center.pojo.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import common.CommonField;
 
 import javax.persistence.Id;
 import java.io.Serializable;
@@ -10,14 +11,8 @@ import java.io.Serializable;
  * 组卷配置明细DTO
  * @author pan
  */
-public class CombExamConfigItemDTO implements Serializable {
+public class CombExamConfigItemDTO extends CommonField implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
-    /**
-     * 组卷配置明细id
-     */
-    @Id
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long id;
 
     /**
      * 题目类型id
@@ -52,14 +47,6 @@ public class CombExamConfigItemDTO implements Serializable {
      * 题目分数
      */
     private Integer score;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public Long getSubjectTypeId() {
         return subjectTypeId;
@@ -111,14 +98,21 @@ public class CombExamConfigItemDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "CombExamConfigItem{" +
-                "id=" + id +
-                ", subjectTypeId=" + subjectTypeId +
+        return "CombExamConfigItemDTO{" +
+                "subjectTypeId=" + subjectTypeId +
                 ", combExamId=" + combExamId +
                 ", categoryId=" + categoryId +
                 ", num=" + num +
                 ", difficulty=" + difficulty +
                 ", score=" + score +
+                ", id=" + id +
+                ", orgId=" + orgId +
+                ", companyId=" + companyId +
+                ", createdBy=" + createdBy +
+                ", createdTime=" + createdTime +
+                ", updatedBy=" + updatedBy +
+                ", updatedTime=" + updatedTime +
+                ", version=" + version +
                 '}';
     }
 }

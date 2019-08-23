@@ -12,7 +12,7 @@ import java.util.Date;
  * 组卷配置VO
  * @author
  */
-public class CombExamConfig implements Serializable {
+public class CombExamConfigVO implements Serializable {
     private static final long serialVersionUID = 6193674149029494679L;
     /**
      * 组卷配置id

@@ -6,37 +6,42 @@ import common.CommonField;
 
 import javax.persistence.Id;
 import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
-
 /**
- * 组卷配置DTO
- * @author pan
+ * 数据字典DTO
+ * @Author: 谢良希
+ * @Date: 2019/8/13
+ * @Version: 1.0
+ * @Maintenance Records:
  */
-public class CombExamConfigDTO extends CommonField implements Serializable {
+public class DictionaryDTO extends CommonField implements Serializable {
+
     private static final long serialVersionUID = 6193674149029494679L;
 
     /**
-     * 组卷配置名
+     * 字典名
      */
     private String name;
-
     /**
-     * 试卷难度
+     * 字典类型
      */
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long difficulty;
-
+    private String category;
     /**
-     * 状态位
+     * 字典值
+     */
+    private String value;
+    /**
+     * 备注
+     */
+    private String remark;
+    /**
+     * 状态
      */
     @Max(2)
     private Integer status;
 
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long companyId;
-
-    private String remark;
 
     public String getName() {
         return name;
@@ -46,20 +51,20 @@ public class CombExamConfigDTO extends CommonField implements Serializable {
         this.name = name;
     }
 
-    public Long getDifficulty() {
-        return difficulty;
+    public String getCategory() {
+        return category;
     }
 
-    public void setDifficulty(Long difficulty) {
-        this.difficulty = difficulty;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
-    public Integer getStatus() {
-        return status;
+    public String getValue() {
+        return value;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setValue(String value) {
+        this.value = value;
     }
 
     public String getRemark() {
@@ -70,14 +75,22 @@ public class CombExamConfigDTO extends CommonField implements Serializable {
         this.remark = remark;
     }
 
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
-        return "CombExamConfigDTO{" +
+        return "DictionaryDTO{" +
                 "name='" + name + '\'' +
-                ", difficulty=" + difficulty +
-                ", status=" + status +
-                ", companyId=" + companyId +
+                ", category='" + category + '\'' +
+                ", value='" + value + '\'' +
                 ", remark='" + remark + '\'' +
+                ", status=" + status +
                 ", id=" + id +
                 ", orgId=" + orgId +
                 ", companyId=" + companyId +

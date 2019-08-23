@@ -15,7 +15,7 @@ import tk.mybatis.spring.annotation.MapperScan;
         "com.bosssoft.bes.basedata.center.service",
         "com.bosssoft.bes.basedata.**.controller",
         "com.bosssoft.hr.train.bossbescommonlogging.annotation",
-        "utils.validator",
+        "utils",
         "annotations"
 })
 @MapperScan(basePackages ="com.bosssoft.bes.basedata.center.dao")
