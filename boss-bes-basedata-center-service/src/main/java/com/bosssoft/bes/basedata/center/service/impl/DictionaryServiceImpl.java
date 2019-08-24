@@ -72,12 +72,12 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO> 
      * 数据字典更新
      *
      * @param dictionaryDTO
-     * @param token
      * @return: boolean
      */
     @Transactional(rollbackFor = SQLException.class)
     @FullCommonField(dataCenterId = 1, machineId = 2, operation = EnumOperation.UPDATE)
-    public boolean update(DictionaryDTO dictionaryDTO, String token) {
+    @Override
+    public boolean update(DictionaryDTO dictionaryDTO) {
         converter.copyProperties(dictionaryDTO, dictionary);
         try {
             System.out.println(dictionaryMapper.updateByPrimaryKeySelective(dictionary));
@@ -125,13 +125,6 @@ public class DictionaryServiceImpl  implements DictionaryService<DictionaryDTO> 
             throw  new BusinessException(10003,e.getMessage(),e);
         }
     }
-
-    @Override
-    public boolean update(DictionaryDTO dictionaryDTO) {
-        return false;
-    }
-
-
 
 
 }

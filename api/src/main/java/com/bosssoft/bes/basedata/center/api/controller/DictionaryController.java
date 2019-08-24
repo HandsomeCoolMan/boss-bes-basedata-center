@@ -79,6 +79,8 @@ public class DictionaryController extends AbstractBaseController {
     public CommonResponse delete(@RequestBody CommonRequest commonRequest) {
 
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
+        System.out.println("数据字典删除信息："+dictionaryVO.toString());
+
         dictionaryService.deleteById(dictionaryVO.getId());
         message ="删除成功！";
         return CommonResponse.create("1","200","1",false,message);
@@ -96,6 +98,7 @@ public class DictionaryController extends AbstractBaseController {
     public CommonResponse update(@RequestBody CommonRequest commonRequest) {
 
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
+        System.out.println("数据字典更新信息："+dictionaryVO.toString());
         converter.copyProperties(dictionaryVO,dictionaryDTO);
         if(dictionaryService.update(dictionaryDTO)){
             message = "修改成功！";
@@ -116,9 +119,9 @@ public class DictionaryController extends AbstractBaseController {
     @Override
     @RequestMapping(value = "query",method = RequestMethod.POST)
     public CommonResponse query(@RequestBody CommonRequest commonRequest) {
-        System.out.println(commonRequest.toString());
+        System.out.println("数据字典查找信息："+commonRequest.toString());
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
-        System.out.println("dictionaryVO:"+dictionaryVO.toString());
+        System.out.println("数据字典查找信息："+dictionaryVO.toString());
 
         converter.copyProperties(dictionaryVO,dictionaryDTO);
         List<Dictionary> dictionaryList = new ArrayList<Dictionary>();
