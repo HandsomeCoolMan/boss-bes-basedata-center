@@ -41,11 +41,10 @@ public class DictionaryController extends AbstractBaseController {
     /**返回给前端的消息*/
     private String message;
 
-    DictionaryVO dictionaryVO = new DictionaryVO();
 
-    DictionaryDTO dictionaryDTO = new DictionaryDTO();
 
-    private String token = "eyJhbGciOiJIUzI1NiJ9.eyJjb21wYW55SWQiOiIxIiwicm9sZUlkIjoiMSIsImlzcyI6InN5c191c2VyIiwibmFtZSI6IuWViuWViiIsImlkIjoiMSIsImV4cCI6MTU3MTcyNTEyNSwiaWF0IjoxNTY2NTQxMTI1LCJvcmdJZCI6IjExMSJ9._XES7YiCU3ebulefJrDJAYVG3ZToH-a_OI0G_I9yHH8";
+
+    private String token = "eyJhbGciOiJIUzI1NiJ9.eyJjb21wYW55SWQiOiIxIiwicm9sZUlkIjoiMSIsImlzcyI6InN5c191c2VyIiwibmFtZSI6IuWViuWViiIsImlkIjoiMSIsImV4cCI6MTU3MTgxNDIxOCwiaWF0IjoxNTY2NjMwMjE4LCJvcmdJZCI6IjExMSJ9.20l1Nag5In95bWASn7YcmEc3P0zsOATGr1ogDrGdB1o";
 
     /**
      * 数据字典添加
@@ -57,6 +56,9 @@ public class DictionaryController extends AbstractBaseController {
     @Override
     @RequestMapping(value = "save",method = RequestMethod.POST)
     public CommonResponse save(@RequestBody  CommonRequest commonRequest) {
+
+        DictionaryVO dictionaryVO = new DictionaryVO();
+        DictionaryDTO dictionaryDTO = new DictionaryDTO();
 
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
         converter.copyProperties(dictionaryVO,dictionaryDTO);
@@ -78,6 +80,9 @@ public class DictionaryController extends AbstractBaseController {
     @RequestMapping(value = "delete",method = RequestMethod.POST)
     public CommonResponse delete(@RequestBody CommonRequest commonRequest) {
 
+        DictionaryVO dictionaryVO = new DictionaryVO();
+        DictionaryDTO dictionaryDTO = new DictionaryDTO();
+
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
         System.out.println("数据字典删除信息："+dictionaryVO.toString());
 
@@ -97,6 +102,8 @@ public class DictionaryController extends AbstractBaseController {
     @RequestMapping(value = "update",method = RequestMethod.POST)
     public CommonResponse update(@RequestBody CommonRequest commonRequest) {
 
+        DictionaryVO dictionaryVO = new DictionaryVO();
+        DictionaryDTO dictionaryDTO = new DictionaryDTO();
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
         System.out.println("数据字典更新信息："+dictionaryVO.toString());
         converter.copyProperties(dictionaryVO,dictionaryDTO);
@@ -119,11 +126,22 @@ public class DictionaryController extends AbstractBaseController {
     @Override
     @RequestMapping(value = "query",method = RequestMethod.POST)
     public CommonResponse query(@RequestBody CommonRequest commonRequest) {
-        System.out.println("数据字典查找信息："+commonRequest.toString());
+        DictionaryVO dictionaryVO = new DictionaryVO();
+        DictionaryDTO dictionaryDTO = new DictionaryDTO();
+
+        System.out.println("数据字典查找信息CommonRequest："+commonRequest.toString());
+        if("".equals(commonRequest.getBody().getData().toString()) || commonRequest.getBody().getData().toString() == null){
+            System.out.println("进入到为空判断");
+            //如果data里面什么都没有，就不转化直接用空dto进行查询
+            List<Dictionary> dictionaryList = new ArrayList<Dictionary>();
+            dictionaryList = dictionaryService.queryAll(dictionaryDTO);
+            return CommonResponse.create("1","200","1",false,dictionaryList);
+        }
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
-        System.out.println("数据字典查找信息："+dictionaryVO.toString());
+        System.out.println("数据字典查找信息dictionaryVO："+dictionaryVO.toString());
 
         converter.copyProperties(dictionaryVO,dictionaryDTO);
+        System.out.println("数据字典查找信息dictionaryDTO："+dictionaryDTO.toString());
         List<Dictionary> dictionaryList = new ArrayList<Dictionary>();
         dictionaryList = dictionaryService.queryAll(dictionaryDTO);
 

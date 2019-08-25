@@ -2,6 +2,7 @@ package com.bosssoft.bes.basedata.center.pojo.dto;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import common.BaseDTO;
 import common.CommonField;
 
 import javax.persistence.Id;
@@ -13,8 +14,8 @@ import java.util.Date;
  * 题目类别DTO
  * @author pan
  */
-public class CategoryDTO extends CommonField implements Serializable {
-    private static final long serialVersionUID = 6193674149029494679L;
+public class CategoryDTO extends BaseDTO implements Serializable {
+    private static final long serialVersionUID = 1645491693425153066L;
 
     /**
      * 题目类别
@@ -62,6 +63,7 @@ public class CategoryDTO extends CommonField implements Serializable {
                 "name='" + name + '\'' +
                 ", remark='" + remark + '\'' +
                 ", status=" + status +
+                ", token='" + token + '\'' +
                 ", id=" + id +
                 ", orgId=" + orgId +
                 ", companyId=" + companyId +

@@ -1,22 +1,25 @@
-package com.bosssoft.bes.basedata.center.pojo.dto;
+package com.bosssoft.bes.basedata.center.pojo.vo;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.Serializers;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-import common.BaseDTO;
-import common.CommonField;
 
 import javax.persistence.Id;
 import javax.validation.constraints.Max;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * 题目类型DTO
+/**题目VO
  * @author pan
  */
-public class SubjectTypeDTO extends BaseDTO implements Serializable {
-    private static final long serialVersionUID = 6193674149029494679L;
+public class SubjectSearchVO implements Serializable {
+
+    private static final long serialVersionUID = 2984410047320387515L;
+    /**
+     * 题目id
+     */
+    @Id
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long id;
 
     /**
      * 题目
@@ -35,11 +38,13 @@ public class SubjectTypeDTO extends BaseDTO implements Serializable {
     @JsonSerialize(using = ToStringSerializer.class)
     private Long categoryId;
 
-    /**
-     * 状态位
-     */
-    @Max(2)
-    private Integer status;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -65,30 +70,13 @@ public class SubjectTypeDTO extends BaseDTO implements Serializable {
         this.categoryId = categoryId;
     }
 
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
     @Override
     public String toString() {
-        return "SubjectTypeDTO{" +
-                "name='" + name + '\'' +
+        return "SubjectSearchVO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", subjectTypeId=" + subjectTypeId +
                 ", categoryId=" + categoryId +
-                ", status=" + status +
-                ", token='" + token + '\'' +
-                ", id=" + id +
-                ", orgId=" + orgId +
-                ", companyId=" + companyId +
-                ", createdBy=" + createdBy +
-                ", createdTime=" + createdTime +
-                ", updatedBy=" + updatedBy +
-                ", updatedTime=" + updatedTime +
-                ", version=" + version +
                 '}';
     }
 }
