@@ -41,10 +41,7 @@ public class DictionaryController extends AbstractBaseController {
     /**返回给前端的消息*/
     private String message;
 
-
-
-
-    private String token = "eyJhbGciOiJIUzI1NiJ9.eyJjb21wYW55SWQiOiIxIiwicm9sZUlkIjoiMSIsImlzcyI6InN5c191c2VyIiwibmFtZSI6IuWViuWViiIsImlkIjoiMSIsImV4cCI6MTU3MTgxNDIxOCwiaWF0IjoxNTY2NjMwMjE4LCJvcmdJZCI6IjExMSJ9.20l1Nag5In95bWASn7YcmEc3P0zsOATGr1ogDrGdB1o";
+    private String token = "eyJhbGciOiJIUzI1NiJ9.eyJjb21wYW55SWQiOiIxIiwicm9sZUlkIjoiMSIsImlzcyI6InN5c191c2VyIiwibmFtZSI6IuWViuWViiIsImlkIjoiMSIsImV4cCI6MTU3MTk2NzMxNCwiaWF0IjoxNTY2NzgzMzE0LCJvcmdJZCI6IjExMSJ9.MaB-E5JgEyW17G6XB0qxTVq4_i7R3PthUE6GHpHHiZQ";
 
     /**
      * 数据字典添加
@@ -59,6 +56,7 @@ public class DictionaryController extends AbstractBaseController {
 
         DictionaryVO dictionaryVO = new DictionaryVO();
         DictionaryDTO dictionaryDTO = new DictionaryDTO();
+
 
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
         converter.copyProperties(dictionaryVO,dictionaryDTO);
@@ -83,7 +81,8 @@ public class DictionaryController extends AbstractBaseController {
         DictionaryVO dictionaryVO = new DictionaryVO();
         DictionaryDTO dictionaryDTO = new DictionaryDTO();
 
-        dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
+        dictionaryVO = JSON.parseObject(JSON.toJSONString(commonRequest.getBody().getData()), DictionaryVO.class);
+        //dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
         System.out.println("数据字典删除信息："+dictionaryVO.toString());
 
         dictionaryService.deleteById(dictionaryVO.getId());
@@ -137,7 +136,8 @@ public class DictionaryController extends AbstractBaseController {
             dictionaryList = dictionaryService.queryAll(dictionaryDTO);
             return CommonResponse.create("1","200","1",false,dictionaryList);
         }
-        dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
+        dictionaryVO = JSON.parseObject(JSON.toJSONString(commonRequest.getBody().getData()), DictionaryVO.class);
+        //dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
         System.out.println("数据字典查找信息dictionaryVO："+dictionaryVO.toString());
 
         converter.copyProperties(dictionaryVO,dictionaryDTO);

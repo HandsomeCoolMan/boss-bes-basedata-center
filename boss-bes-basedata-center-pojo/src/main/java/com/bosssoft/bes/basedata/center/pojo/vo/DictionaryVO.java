@@ -27,14 +27,17 @@ public class DictionaryVO implements Serializable {
     /**
      * 字典名
      */
+    @NotNull(message = "字典名不能为空！")
     private String name;
     /**
      * 字典类型
      */
+    @NotNull(message = "字典类型不能为空！")
     private String category;
     /**
      * 字典值
      */
+    @NotNull(message = "字典值不能为空！")
     private String value;
     /**
      * 更新时间

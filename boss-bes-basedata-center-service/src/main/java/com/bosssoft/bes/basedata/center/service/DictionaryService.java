@@ -3,7 +3,6 @@ package com.bosssoft.bes.basedata.center.service;
 import com.bosssoft.bes.basedata.center.entity.Dictionary;
 import com.bosssoft.bes.basedata.center.pojo.dto.DictionaryDTO;
 import common.CommonService;
-import exception.BusinessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
