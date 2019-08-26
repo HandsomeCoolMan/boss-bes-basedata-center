@@ -106,6 +106,7 @@ public class DictionaryController extends AbstractBaseController {
         dictionaryVO = (DictionaryVO) converter.getVoFromCommonRequest(commonRequest,dictionaryVO.getClass());
         System.out.println("数据字典更新信息："+dictionaryVO.toString());
         converter.copyProperties(dictionaryVO,dictionaryDTO);
+        dictionaryDTO.setToken(token);
         if(dictionaryService.update(dictionaryDTO)){
             message = "修改成功！";
             return CommonResponse.create("1","200","1",false,message);
